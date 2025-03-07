@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+</head>
+<style>
+    table{
+        border-style: solid;
+        border: 3px solid black;
+        border-collapse: collapse;
+        width: 90vw;
+        height: 90vh;
+        margin-left: 5%;
+    }
+    tr,td,th{
+        text-align: center;
+        font-size: 25px;
+    }
+</style>
+<body>
+    <table>
+        <caption><p><b><h1>Table Layout  Assingment</h1></b></p></caption>
+        <!-- First row -->
+        <tr>
+           
+            <td colspan="6" style="border-style: solid; border-color: black; width: 2px;background-color:lightblue">1</td>
+        </tr>
+        <!-- Second row -->
+        <tr>
+            <td rowspan="6"style="border-style: solid; border-color: black; border-width: 3px;background-color:lightblue">2</td>
+           <td colspan="6"style="border-style: solid;border-color: black;border-width:3px ;background-color:lightblue">3</td>
+           
+
+        </tr>
+        <!-- Third Row -->
+        <tr>
+            <td colspan="6"style="border-style: solid;border-color: black;border-width:3px ;background-color:lightblue">4</td>
+          
+        
+        </tr>
+        <tr>
+            <td colspan="6"style="border-style: solid; border-color: black; width: 2px;background-color:lightblue">5</td>
+           </tr>
+    </table>
+</body>
+</html>
