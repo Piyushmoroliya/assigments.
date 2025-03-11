@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Index Page</title>
 </head>
 <style>
-    table{
+    table {
         width: 100vw;
         height: 100vh;
         border: 3px;
@@ -14,74 +15,144 @@
         border-color: black;
         border-collapse: collapse;
     }
-    tr,td,th{
+
+    tr,
+    td,
+    th {
         border: 3px solid black;
         text-align: center;
         font-size: 30px;
-        
+
     }
-    .First-row{
+
+    .First-row {
         height: 10vh;
         width: 100vh;
         background-color: lightblue;
     }
-    .Home-box{
+
+    .Home-box {
         height: 50vh;
         width: 100vh;
         border: 3px solid black;
-        background-color: aqua;
+        background-color: lightgreen;
     }
-    .About-box{
+
+    .About-box {
         height: 50vh;
         width: 100vh;
         border: 3px solid black;
-        background-color: aquamarine;
+        background-color: lightblue;
     }
-    .skills-box{
+
+    .skills-box {
         height: 50vh;
         width: 100vh;
         border: 3px solid black;
-        background-color: rgb(36, 146, 109);
+        background-color: lightgreen;
     }
-    .education-box{
+
+    .education-box {
         height: 50vh;
         width: 100vh;
         border: 3px solid black;
-        background-color: lightgoldenrodyellow;
+        background-color: lightblue;
     }
-    .ContactMe-box{
+
+    .ContactMe-box {
         height: 50vh;
         width: 100vh;
         border: 3px solid black;
-        background-color: lightcoral;
+        background-color: lightgreen;
     }
 </style>
+
 <body>
     <table>
         <tr class="First-row">
-            <td>Home</td>
-            <td style="background-color: red;">About</td>
-            <td style="background-color: gray;">Skills</td>
-            <td style="background-color: yellowgreen;">Education</td>
-            <td style="background-color: orange;">ContactMe</td>
+            <td style="background-color: lightgrey;"><a href="#Home"><span style="color: black;">Home</span></a></td>
+            <td style="background-color: lightgrey;"><a href="#About"><span style="color: black;">About</span></a></td>
+            <td style="background-color: lightgray;"><a href="#Skills"><span style="color: black;">Skills</span></a>
+            </td>
+            <td style="background-color: lightgray;"><a href="#Projects"><span style="color: black;">Projects</span></a>
+            </td>
+            <td style="background-color: lightgray;"><a href="#ContactMe"><span style="color: black;">Contact</span></a>
+            </td>
         </tr>
         <tr class="secondt-row">
-            <td class="Home-box" colspan="5">Home</td>
-    
+            <td class="Home-box" colspan="5" id="Home">
+                Hello I am <br> <span style="font-size: 60px; color: blueviolet;">Piyush Moroliya</span> <br>
+                and I am an Full Stack Developer. <br>
+                A Full Stack Developer builds and manages both the front-end and back-end of web applications.
+
+            </td>
+
         </tr>
         <tr class="Third-row">
-            <td class="About-box" colspan="5">About</td>
+            <td class="About-box" colspan="5" id="About">
+                "I am a passionate Full Stack Developer with a deep love <br> for crafting seamless and dynamic web
+                applications. From designing intuitive user interfaces to<br> building robust back-end systems, I enjoy
+                bringing ideas to life with clean and efficient code. <br> Constantly exploring new technologies, I
+                strive to
+                create innovative solutions that enhance user experiences."
+            </td>
         </tr>
         <tr class="Fourth-row">
-            <td class="skills-box" colspan="5">Skills</td>
+            <td class="skills-box" colspan="5" id="Skills">
+                <ul>
+                    Skills :- HTML,CSS,Bootstrap and Javascript. <br><br>
+                    Programming Languages Known :- C,Java,Javascript,Python and SQL. <br><br>
+                    Hardware Applications Known :- Xylic Vivado,Ardino Uno,Raspbeery Pi and Digital Electronics
+                </ul>
+
+            </td>
         </tr>
         <tr class="Fourth-row">
-            <td class="education-box" colspan="5">Education</td>
+            <td class="education-box" colspan="5" id="Projects">
+                <br>
+                <a href="./top-Famous.html">Top Famous Personalities</a><br><br>
+
+                <a href="./resume.html">My Resume</a><br><br>
+
+                <a href="./signinform.html">Registration Form</a><br><br>
+
+                <a href="./form-tag.html">Form Made By HTML tags</a><br><br>
+
+                <a href="./tabel.html">CPU Components Made By Using HTML Tabel Tag</a><br><br>
+
+                <a href="./tabel-two.html">My Report Card Using HTML Tabel Tag</a><br><br>
+
+                <a href="./studentdata.html">Student Data Card Made With HTML Table Tag</a><br><br>
+
+                <a href="./youtube-player.html">Youtube Player</a><br><br>
+
+                <a href="./tabel-layout.html">Tabel Layout </a><br><br>
+
+                <a href="./calculater.html">Calculater</a><br><br>
+
+
+
+            </td>
         </tr>
         <tr class="Fourth-row">
-            <td class="ContactMe-box" colspan="5">ContactMe</td>
+            <td class="ContactMe-box" colspan="5" id="ContactMe">
+                <span style="font-size: 40px;">Contact </span><br>
+                Phone no. : +91 7558XXXXXX <br>
+
+                Location : Nagpur <br>
+
+                Email : 24moroliyap@rbunagpur.in <br>
+
+                Git Hub Profile : <a href="https://github.com/">github</a><br>
+
+                Linkedin : <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9302118">
+                    Linkedin</a><br>
+
+                Skype : Available
+            </td>
         </tr>
     </table>
-    
+
 </body>
+
 </html>
