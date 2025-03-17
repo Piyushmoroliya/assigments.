@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Index Page</title>
+</head>
+<style>
+    /* Main Table Structure CSS */
+    table {
+        width: 100vw;
+        height: 150vh;
+        border: 3px;
+        border-style: solid;
+        border-color: black;
+        border-collapse: collapse;
+    }
+
+    /* CSS For tr,td,th*/
+    tr,
+    td,
+    th {
+        border: 3px solid black;
+        text-align: center;
+        font-size: 30px;
+
+    }
+
+    .First-row {
+        height: 10vh;
+        width: 100vh;
+        background-color: lightblue;
+    }
+
+    /* Home box CSS */
+    .Home-box {
+        height: 60vh;
+        width: 100vh;
+        border: 3px solid black;
+        background: linear-gradient(lightblue,lightgreen,lightgray);
+
+    }
+
+    /* About-box CSS */
+    .About-box {
+        height: 50vh;
+        width: 100vh;
+        border: 3px solid black;
+        background-color: lightblue;
+    }
+
+    /* skills-box CSS */
+    .skills-box {
+        height: 50vh;
+        width: 100vh;
+        border: 3px solid black;
+        background-color: lightgreen;
+    }
+
+    /* education-box CSS */
+    .education-box {
+        height: 50vh;
+        width: 100vh;
+        border: 3px solid black;
+        background-color: lightblue;
+    }
+
+    /* ContactMe-box CSS */
+    .ContactMe-box {
+        height: 50vh;
+        width: 100vh;
+        border: 3px solid black;
+        background-color: lightgreen;
+    }
+
+    /* project-section-tabel CSS */
+    .project-section-tabel {
+        height: 5b0vh;
+        width: 100vw;
+        border: 3px solid black;
+        background-color: lightblue;
+
+    }
+
+    /* Project Section CSS */
+
+    .project-section-data {
+        height: 20vh;
+        width: 25px;
+        border: 3px solid black;
+    }
+
+    /* CSS For Image */
+    .image-styling {
+        width: 400px;
+        height: 400px;
+        border-radius: 200px;
+        border: 5px solid white;
+    }
+</style>
+
+<body>
+    <table>
+        <tr class="First-row">
+            <td style="background-color: lightgrey;"><a href="#Home"><span style="color: black;">Home</span></a></td>
+            <td style="background-color: lightgrey;"><a href="#About"><span style="color: black;">About</span></a></td>
+            <td style="background-color: lightgray;"><a href="#Skills"><span style="color: black;">Skills</span></a>
+            </td>
+            <td style="background-color: lightgray;"><a href="#Projects"><span style="color: black;">Projects</span></a>
+            </td>
+            <td style="background-color: lightgray;"><a href="#ContactMe"><span style="color: black;">Contact</span></a>
+            </td>
+        </tr>
+        <tr class="secondt-row">
+            <td class="Home-box" colspan="5" id="Home">
+                <br>
+                <img class="image-styling" src="../assets/images/piyush-portfolio-image-three.jpeg">
+                <br>
+                <span style="color: black;">Hello I am</span>
+                <br> <span style="font-size: 60px; color: blueviolet;">Piyush Moroliya</span> <br>
+                <span style="color: black;">and I am an Full Stack Developer.</span> <br>
+                <span style="color: black;">A Full Stack Developer builds and manages both the front-end and back-end of web applications.</span>
+                <br><br>
+            </td>
+
+
+        </tr>
+        <tr class="Third-row">
+            <td class="About-box" colspan="5" id="About">
+                "I am a passionate Full Stack Developer with a deep love <br> for crafting seamless and dynamic web
+                applications. From designing intuitive user interfaces to<br> building robust back-end systems, I enjoy
+                bringing ideas to life with clean and efficient code. <br> Constantly exploring new technologies, I
+                strive to
+                create innovative solutions that enhance user experiences."
+            </td>
+        </tr>
+        <tr class="Fourth-row">
+            <td class="skills-box" colspan="5" id="Skills">
+                <ul>
+                    Skills :- HTML,CSS,Bootstrap and Javascript. <br><br>
+                    Programming Languages Known :- C,Java,Javascript,Python and SQL. <br><br>
+                    Hardware Applications Known :- Xylic Vivado,Ardino Uno,Raspbeery Pi and Digital Electronics
+                </ul>
+
+            </td>
+        </tr>
+        <tr class="Fourth-row">
+            <!-- Project Section Box -->
+            <table class="project-section-tabel" id="Projects">
+                <!-- first box row -->
+                <tr class="project-section-row">
+                    <td class="project-section-data">
+                        <a href="./form-tag.html"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRoI9W94xSfofufKwV4tv5hcAIDS2AaxlSw&s"
+                                width="100%" height="200px">
+                            <h3>Form</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./tabel.html"><img
+                                src="https://www.shutterstock.com/image-vector/computer-parts-icon-set-components-600nw-2227108941.jpg"
+                                width="100%" height="200px">
+                            <h3>CPU Parts</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./tabel-two.html"><img
+                                src="https://media.istockphoto.com/id/1001237686/vector/document-with-tables-icon-vector-sign-and-symbol-isolated-on-white-background-document-with.jpg?s=612x612&w=0&k=20&c=KWxJs6gpwY1FzMuaBo0Bhi49_XcN4SwCYdFMWpn9E3k="
+                                width="100%" height="200px">
+                            <h3>Form Two</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./top-Famous.html"><img
+                                src="https://dhammabharat.com/wp-content/uploads/2023/10/Most-Famous-Americans-of-All-Time.jpg"
+                                width="100%" height="200px">
+                            <h3>Famous Persons</h3>
+                        </a>
+                    </td>
+                </tr>
+                <!-- second box row -->
+                <tr class="project-section-row">
+                    <td class="project-section-data">
+                        <a href="./tabel-layout.html"><img
+                                src="https://getflywheel-images.s3.us-east-2.amazonaws.com/uploads/2017/08/combined-starter.jpg"
+                                width="100%" height="200px">
+                            <h3>Layouts</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./studentdata.html"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx0G35foj_Wp7vxP-XqASbGlLs5NVGWkY-nQ&s"
+                                width="100%" height="200px">
+                            <h3>Report Card</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./calculater.html"><img
+                                src="https://media.istockphoto.com/id/1370669875/vector/calculator-math-device-financial-analytics-bookkeeping-budget-debit-credit-calculations.jpg?s=612x612&w=0&k=20&c=CkGK3WCw3-svXQj0aTu_Bjih8yeUAFfp9xXitbrr24o="
+                                width="100%" height="200px">
+                            <h3>Calculater</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./resume.html"><img
+                                src="https://e7.pngegg.com/pngimages/605/888/png-clipart-resume-curriculum-vitae-template-moto-highway-racing-computer-icons-resume-blue-text.png"
+                                width="100%" height="200px">
+                            <h3>My Resume</h3>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="project-section-row">
+                    <td class="project-section-data">
+                        <a href="./signinform.html"><img
+                                src="https://img.freepik.com/free-vector/modern-online-registration-compositio_23-2147993866.jpg"
+                                width="100%" height="200px">
+                            <h3>Form Three</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./youtube-player.html"><img
+                                src="https://img.freepik.com/premium-vector/3d-colorful-play-button-media-video-player-logo-template_349893-37.jpg"
+                                width="100%" height="200px">
+                            <h3>Youtube Page</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./index.html"><img
+                                src="https://cdn.freebiesupply.com/logos/large/2x/index-4-logo-png-transparent.png"
+                                width="100%" height="200px">
+                            <h3>Index Page</h3>
+                        </a>
+                    </td>
+                    <td class="project-section-data">
+                        <a href="./assigment.html"><img
+                                src="https://english.mathrubhumi.com/image/contentid/policy:1.10354373:1739901424/shivaji%20jayanti.jpg?$p=7d716ba&f=16x9&w=1080&q=0.8"
+                                width="100%" height="200px">
+                            <h3>HTML Project</h3>
+                        </a>
+                    </td>
+                </tr>
+                <!-- contact section -->
+                <tr>
+                    <td colspan="4" class="ContactMe-box" id="ContactMe">
+                        <span style="font-size: 55px;">Contact Me :-</span><br><br>
+                        Phone Number :- 7552******. <br><br>
+                        E-mail :- 24moroliyap@rbunagpur.in <br><br>
+                        github :- <a href="https://github.com/dashboard">My github Account</a> <br><br>
+                        Linkedin :- <a
+                            href="https://www.linkedin.com/feed/?trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9302118">My
+                            Linkedin Account</a><br><br>
+                        Skype :- Available
+
+
+                    </td>
+                </tr>
+            </table>
+
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
