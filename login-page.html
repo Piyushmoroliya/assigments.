@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 110vh;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(pink, violet, purple);
+          
+        }
+
+        /* Login Container */
+        .login-container {
+            width: 75vw;
+            height: 95vh;
+            border: 3px solid black;
+            border-radius: 20px;
+            background: white;
+            margin: 20px;
+            margin-left: 15%;
+        }
+
+        /* Heading Section */
+        .login-body {
+            width: 100%;
+            height: 7vh;          
+        }
+
+        .heading-style {
+            font-size: 55px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 5%;
+        }
+
+        /* Form Section */
+        .form-section {
+            width: 100%;
+            height: 65vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .box-one, .box-two {
+    
+            height: 65vh;
+            padding: 20px;
+            background-color:white;
+            color: black;
+        }
+
+    
+
+        /* Form Inputs */
+        label {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            height: 50px;
+            font-size: 22px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        ::placeholder {
+            font-size: 20px;
+            font-weight: bold;
+            color: lightgray;
+        }
+
+        /* Submit Section */
+        .submit-section {
+            width: 100%;
+            height: 10vh;          
+            background: #ddd;
+        }
+        button{
+            width: 55vw;
+            height: 10vh;
+            background: linear-gradient(pink, violet, purple);
+            border-radius: 20px;
+            margin-left: 15%;
+            font-size: 35px;
+            color: white;
+        }
+        /* hover of button */
+        button:hover{
+          background-color: aqua;
+          transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Heading Section -->
+        <div class="login-body">
+            <h1 class="heading-style">Registration</h1>
+
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="box-one">
+                <br>
+                <br>
+                <label><span style="font-size: 35px;">Full Name:</span></label>
+                <input type="text" placeholder="Enter Full Name">
+                <br>
+                <br>
+                <br>
+
+
+                <label><span style="font-size: 35px;">Email:</span></label>
+                <input type="text" placeholder="Enter Email">
+                <br>
+                <br>
+                <br>
+
+                <label><span style="font-size: 35px;">Password:</span></label>
+                <input type="password" placeholder="Enter Password">
+                <br>     
+                <br>      
+                <label><span style="font-size: 35px;">Gender:</span></label><br>
+                <br>
+                <input type="checkbox"><label><span style="font-size: 30px;">Male</span></label>
+                <input type="checkbox"><label><span style="font-size: 30px;">Female</span></label>
+                <input type="checkbox"><label><span style="font-size: 30px;" >Other</span></label>
+     
+            </div>
+            <div class="box-two">
+                <br>
+                <br>
+                <label><span style="font-size: 35px;">Username Name:</span></label>
+                <input type="text" placeholder="Enter Username">
+                <br>
+                <br>
+                <br>
+
+
+                <label><span style="font-size: 35px;" >Phone Nuamber:</span></label>
+                <input type="text" placeholder="Enter Phone Nuamber">
+                <br>
+                <br>
+                <br>
+
+                <label> <span style="font-size: 35px;">Conform Password:</span></label>
+                <input type="password" placeholder="Enter Conform Password">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+       <!-- Submit Section -->
+          <button>Register</button>
+
+    </div>
+</body>
+</html>
