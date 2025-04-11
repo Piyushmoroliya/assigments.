@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Genzezz</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 200vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        #h1 {
+            background-color: yellow;
+        }
+
+        #container {
+            width: 100%;
+        }
+
+        /* header section CSS */
+
+        #header {
+            width: 100%;
+            height: 80px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border: 3px solid black;
+        }
+
+        #logo {
+            width: 100%;
+            height: 80%;
+        }
+
+        #header-links {
+            width: 100%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* home section CSS */
+        #home {
+            width: 100%;
+            height: 600px;
+        }
+
+        table {
+            width: 100vw;
+            height: 600px;
+            border-collapse: collapse;
+        }
+
+        tr,
+        td {
+            border-collapse: collapse;
+
+        }
+
+        .box-one {
+            width: 70vw;
+            height: 600px;
+        }
+
+        .box-two {
+            width: 30vw;
+            height: 900px;
+        }
+
+        .Text-style {
+            text-align: center;
+            font-size: 55px;
+            color: rgb(209, 15, 209);
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 25px;
+
+        }
+
+        /* product section CSS */
+        #Product {
+            width: 100%;
+            height: 110vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            row-gap: 30px;
+            column-gap: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-box {
+            height: 500px;
+            width: 100%;
+            background-color: rgb(235, 237, 239);
+        }
+
+        img {
+            height: 300px;
+        }
+
+        /* about section css */
+        #about {
+            width: 100vw;
+            height: 50vh;
+        }
+        .about-tabel{
+            width: 100vw;
+            height: 30vh;
+   
+        }
+    
+        /* contact section css */
+        #contact{
+            width: 100vw;
+            height: 80vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- header section start -->
+        <div id="header">
+            <div id="logo">
+
+                <h1>Tech Genzezz</h1>
+
+            </div>
+            <div id="header-links">
+                <h1><a href="#home">Home</a></h1>
+                <h1><a href="#Product">Products</a></h1>
+                <h1><a href="#about">About</a></h1>
+                <h1><a href="#contact">Contact</a></h1>
+            </div>
+        </div>
+        <!-- header section end-->
+        <!-- home section start -->
+        <div id="home">
+
+            <table>
+                <tr>
+                    <!-- Box consist of text -->
+                    <td class="home-box">
+                        <h1 class="Text-style">Welcome to Tech Genzezz</h1>
+                        <h3>An apple Product Shop</h3>
+                        <h3>"Power Up Your Life with the Best in IOS and Apple Opreting Sysytem!"</h3>
+
+
+                    </td>
+                    <!-- Box consist of image-->
+                    <td class="image-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsb6Ykxg2GycZ2TSknjRKdTi610RJ8UlYt78hqMis50hpc5fz7CqfrWYxlMFrAtHsZDA&usqp=CAU"
+                            width="100%" height="100%" alt="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <!-- home section end -->
+        <!-- product section start -->
+        <h1 style="text-align: center; font-size: 45px;">Our Product</h1>
+        <div id="Product">
+            <div class="product-box">
+                <img src="https://iplanet.one/cdn/shop/files/iPhone_16_Pro_Max_White_Titanium_PDP_Image_Position_1__en-IN.jpg?v=1727251291"
+                    alt="">
+                <h3>iphone 16 Pro Max</h3>
+                <h4>$1,199</h4>
+                <p>Iphone 16 Pro Max,White Titanium,Capacity 1TB,Weight: 227 g (7.99 oz.)</p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-16-pro-max-blacktitanium-select?wid=940&hei=1112&fmt=png-alpha&.v=1723828277208"
+                    alt="">
+                <h3>iphone 15 Pro Max</h3>
+                <h4>$926.00</h4>
+                <p>Iphone 15 Pro Max,Midnight Black,Capacity 1TB,Weight: 224 g (7.99 oz.)</p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://www.imagineonline.store/cdn/shop/files/iPhone_16_Plus_Pink_PDP_Image_Position_1__en-IN_d10aa447-6a42-4539-ba1c-f80387ffaf5c.jpg?v=1727248605"
+                    alt="">
+                <h3>iphone 16 </h3>
+                <h4>$799</h4>
+                <p>Iphone 16 ,light Pink,Capacity 128GB,Weight: 204 g (7.99 oz.)</p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://buy.budli.in/cdn/shop/files/iPadAir2.jpg?v=1711449797&width=1445" alt="">
+                <h3>i Pad</h3>
+                <h4>$329.00</h4>
+                <p>Apple M3 chip powers Apple Intelligence, incredible performance and advanced graphics </p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25717370/DSC_1249.jpg?quality=90&strip=all&crop=16.666666666667,0,66.666666666667,100"
+                    alt="">
+                <h3>Mac Mini M4</h3>
+                <h4>$599.00</h4>
+                <p>10-Core CPU,10-Core GPU,16GB Unified Memory,256GB SSD Storage Footnote </p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://m.media-amazon.com/images/I/715izx6g41L._AC_UF894,1000_QL80_.jpg" alt="">
+                <h3>Air Pods Max</h3>
+                <h4>$149.93</h4>
+                <p>Air Pods 4 Personalised Spatial Audio with dynamic head tracking Footnote ⁴ </p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCkwI3nYPwvg5N8AVqVNxw_nD5YgT2syVmaA&s"
+                    alt="">
+                <h3>Magic Mouse</h3>
+                <h4>$110.39</h4>
+                <p>Height: 2.16 cm (0.85 inches),Width: 5.71 cm (2.25 inches)Weight: 0.099 kg (0.22 pounds)</p>
+
+
+            </div>
+            <div class="product-box">
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba13-skyblue-select-202503?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1741885365897"
+                    alt="">
+                <h3>Mackbook Air M2</h3>
+                <h4>$883.99</h4>
+                <p>8 GB Ram,128SSD,M2 Bainic chip,18 Hours of battry Life </p>
+
+
+            </div>
+            <div class="product-box">
+                <img src="https://www.imagineonline.store/cdn/shop/files/MacBook_Pro_16-in_Silver_PDP_Image_Position-1__GBEN_fd543cac-4abb-48dc-bb34-80fb39e57fbe.jpg?v=1692353581"
+                    alt="">
+                <h3>Mackbook Pro</h3>
+                <h4>$993.99</h4>
+                <p>32 GB Ram,1TB SSD,22 Hours of battry Life </p>
+
+            </div>
+            <div class="product-box">
+                <img src="https://5.imimg.com/data5/KC/CN/MY-3874008/apple-imac-monitor.jpg" alt="">
+                <h3>Studio Display</h3>
+                <h4>$500</h4>
+                <p> An immersive 68.29 cm (27”) 5K Retina display with outstanding camera and audio.</p>
+
+            </div>
+        </div>
+        <br>
+        <!-- product section end -->
+    </div>
+    <!-- About section Star -->
+    <div id="about">
+        <h1 style="text-align: center; font-size: 45px;">About Shop</h1>
+
+        <p style="text-align: center; font-size: 25px;">Welcome to Tech Genzezz <br>, your one-stop destination for the
+            latest and most innovative Apple
+            products. We offer a wide range of Apple devices, including<br> iPhones, MacBooks, iPads, Apple Watches, and
+            AirPods, ensuring you experience cutting-edge technology with<br> seamless integration. Whether you're
+            looking for the perfect smartphone, a powerful laptop, or<br> premium accessories, we have everything to
+            enhance your digital lifestyle. Our store guarantees genuine<br> Apple products, expert assistance, and a
+            hassle-free shopping experience. Visit us today and explore the world of Apple innovation!</p>
+        <br>
+        <h1 style="text-align: center; font-size: 45px;">Our Branches</h1>
+
+        <table class="about-tabel">
+            <tr class="about-tabel-row">
+                <td class="about-tabel-data">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhJYoewzOyhONXXe7aVwl-Gk6zuq2k4L5m4Q&s"
+                    width="100%" height="100%" alt="">
+
+                </td>
+                <td class="about-tabel-data">
+                    <img src="https://www.livemint.com/lm-img/img/2023/04/17/600x338/Apple_BKC_1681713278782_1681713298051.jpg"
+                    width="100%" height="100%" alt="">
+
+                </td>
+                <td class="about-tabel-data">
+                    <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202304/untitled_design_26-sixteen_nine_0.jpg?size=948:533"
+                    width="100%" height="100%" alt="">
+
+                </td>
+                <td class="about-tabel-data">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8kNDRFplaMgaQ9FOztnEj5KdLscx5WFwYow&s"
+                    width="100%" height="100%" alt="">
+
+                </td>
+            </tr>
+      
+        </table>  
+    </div>  
+    <!-- About section end -->
+
+
+    <!-- Contact us section -->
+     <div id="contact">
+        <br>
+        <h1 style="margin-top: 20%; text-align: center; font-size: 45px;">Contact us</h1>
+        <h1 style="margin-top: 3%; text-align: center; font-size: 45px;">Contact/Phone no :- 7558******</h1>
+        <h1 style="margin-top: 3%; text-align: center; font-size: 45px;">Thankyou Visit Again</h1>
+
+     </div>
+
+    <!-- Contact us end -->
+
+</body>
+
+</html>
