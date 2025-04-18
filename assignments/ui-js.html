@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main-container{
+        width: 40vw;
+        height: 60vh;
+        border: 1px solid black;
+        margin-left: 25%;
+        padding: 20px;
+        
+
+    }
+    .display{
+        width: 35vw;
+        height:30vh;
+        background-color: lightgoldenrodyellow;
+        font-size: 40px;
+    }
+    .input{
+        width: 35vw;
+        height: 10vh;
+        border: 1px solid black;
+    }
+    #input{
+        width: 100%;
+        height: 100%;
+    }
+    .btn{
+        width: 30vh;
+        height: 5vh;
+        margin-top: 5%;
+        margin-left: 25%;
+        font-size: 35px;
+        background-color: green;
+    }
+  
+</style>
+<body>
+    
+    <div class="main-container">
+        <div class="display">
+            <div class="display" id="display">
+
+            </div><br>
+            <div class="input">
+                <input type="text" id="input">
+
+            </div>
+            <button class="btn" onclick="inputvalue()" style="font-size: 40px;">Submit</button>
+        </div>
+    </div>
+    <script>
+        function displaystring(){
+            alert("Hello javascript!");
+            let a = 10;
+            console.log(a)
+        }
+        function displaysum(){
+            document.getElementById("display").innerHTML = "2 + 2 ="+ (2 + 2);
+        }
+
+        function inputvalue(){
+            let number = document.getElementById("input").value;
+            document.getElementById("display").innerHTML = number;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O in multiple languages</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .main-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* title box css */
+        .tittle-box {
+            width: 100%;
+            background-color: #00abf0;
+            display: grid;
+
+        }
+        
+        .main-heading {
+            text-align: center;
+            font-size:45px ;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* language section all styles in on frame */
+        .java-box,
+        .javascript-box,
+        .python-box,
+        .c-box {
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        
+        /* boxes background colors */
+        .java-box {
+            background-color: #f5f9fa;
+        }
+        
+        .javascript-box {
+            background-color: #fff8e1;
+        }
+        
+        .python-box {
+            background-color: #e8f5e9;
+        }
+        
+        .c-box {
+            background-color: #f3e5f5;
+        }
+        
+        .input-box,
+        .output-box {
+            border: 3px solid black;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        
+        h2 {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #333;
+            color: white;
+            margin: 0;
+        }
+        
+        .img-container {
+            padding: 15px;
+           display: grid;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- title box -->
+        <div class="tittle-box">
+            <h1 class="main-heading">Input/Output Problems in multiple Programming Languages</h1>
+        </div>
+        <!-- title box ends -->
+
+        <!-- java section -->
+        <div class="java-box">
+            <div class="input-box">
+                <h2>Input syntax for Java</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/java-input-screenshot.png" >
+                </div>
+            </div>
+            <div class="output-box">
+                <h2>Output syntax for Java</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/java-outpur-screenshot.png" >
+                </div>
+            </div>
+        </div>
+        <!-- java section ends -->
+
+        <!-- javascript section -->
+        <div class="javascript-box">
+            <div class="input-box">
+                <h2>Input syntax for JavaScript</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/javascript-program.png">
+                </div>
+            </div>
+            <div class="output-box">
+                <h2>Output syntax for JavaScript</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/javascript-output-one.png">
+                </div>
+            </div>
+        </div>
+        <!-- javascript section ends -->
+
+        <!-- python section -->
+        <div class="python-box">
+            <div class="input-box">
+                <h2>Input syntax for Python</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/python-program.png">
+                </div>
+            </div>
+            <div class="output-box">
+                <h2>Output syntax for Python</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/python-output.png" >
+                </div>
+            </div>
+        </div>
+        <!-- python section ends -->
+
+        <!-- c section -->
+        <div class="c-box">
+            <div class="input-box">
+                <h2>Input syntax for C</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/c-language-program.png" >
+                </div>
+            </div>
+            <div class="output-box">
+                <h2>Output syntax for C</h2>
+                <div class="img-container">
+                    <img src="../assets/Images/c-lagauge-output.png">
+                </div>
+            </div>
+        </div>
+        <!-- c section ends -->
+    </div>
+</body>
+
+</html>

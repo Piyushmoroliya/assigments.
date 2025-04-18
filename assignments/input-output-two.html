@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I/O in Multiple Languages</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Header styles */
+        .title-box {
+            width: 100%;
+            background-color: #00abf0;
+            padding: 2rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Language section styles */
+        .language-section {
+            width: 100%;
+            padding: 2px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 1px;
+            padding-bottom: 0.5px;
+            border-bottom: 2px solid #00abf0;
+        }
+
+        .io-container {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .box {
+            min-width: 300px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .box-content {
+            padding: 1rem;
+            height: 400px;
+            overflow: auto;
+        }
+
+        .box-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Language-specific styling */
+        .java-section {
+            background-color: #f5f5f5;
+        }
+
+        .javascript-section {
+            background-color: #fff8e1;
+        }
+
+        .python-section {
+            background-color: #e3f2fd;
+        }
+
+        .c-section {
+            background-color: #f1f8e9;
+        }
+
+        /* Code display */
+        p{
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Title Section -->
+        <div class="title-box">
+            <h1 class="main-heading">Input/Output Problems in Multiple Programming Languages</h1>
+        </div>
+
+        <!-- Java Section -->
+        <section class="language-section java-section">
+            <h2 class="section-title">Java I/O Examples</h2>
+            <div class="io-container">
+                <div class="box">
+                    <div class="box-header">Input for Java</div>
+                    <div class="box-content">
+
+                        <img src="../assets/Images/java-input-screenshot.png" alt="Java Input Screenshot">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">Output for Java</div>
+                    <div class="box-content">
+                        <p>
+Enter your name:
+John Doe
+Enter your age:
+25
+Processing input...
+
+Name: John Doe
+Age: 25
+Status: Adult</p>
+                        <img src="/api/placeholder/750/400" alt="Java Output Screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript Section -->
+        <section class="language-section javascript-section">
+            <h2 class="section-title">JavaScript I/O Examples</h2>
+            <div class="io-container">
+                <div class="box">
+                    <div class="box-header">Input for JavaScript</div>
+                    <div class="box-content">
+                        <p>
+// Browser-based input
+const name = prompt("Enter your name:");
+const age = parseInt(prompt("Enter your age:"));
+
+console.log("Processing input...");
+
+// Node.js input example
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+readline.question('Enter your name: ', name => {
+  readline.question('Enter your age: ', age => {
+    console.log(`Processing input...`);
+    readline.close();
+  });
+});</p>
+                        <img src="/api/placeholder/750/400" alt="JavaScript Input Screenshot">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">Output for JavaScript</div>
+                    <div class="box-content">
+                        <p>
+// Browser console output
+Processing input...
+Name: John Doe
+Age: 25
+Status: Adult
+
+// Node.js output
+Enter your name: John Doe
+Enter your age: 25
+Processing input...
+Name: John Doe
+Age: 25
+Status: Adult</p>
+                        <img src="/api/placeholder/750/400" alt="JavaScript Output Screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Python Section -->
+        <section class="language-section python-section">
+            <h2 class="section-title">Python I/O Examples</h2>
+            <div class="io-container">
+                <div class="box">
+                    <div class="box-header">Input for Python</div>
+                    <div class="box-content">
+                        <p>
+# Basic input in Python
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+print("Processing input...")
+
+# File input example
+with open('data.txt', 'r') as file:
+    data = file.read()
+    print(f"File content: {data}")</p>
+                        <img src="/api/placeholder/750/400" alt="Python Input Screenshot">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">Output for Python</div>
+                    <div class="box-content">
+                        <p>
+Enter your name: John Doe
+Enter your age: 25
+Processing input...
+Name: John Doe
+Age: 25
+Status: Adult
+
+File content: Sample data from file</p>
+                        <img src="/api/placeholder/750/400" alt="Python Output Screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C Section -->
+        <section class="language-section c-section">
+            <h2 class="section-title">C I/O Examples</h2>
+            <div class="io-container">
+                <div class="box">
+                    <div class="box-header">Input for C</div>
+                    <div class="box-content">
+                        <p>
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int age;
+    
+    printf("Enter your name: ");
+    scanf("%s", name);
+    
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    
+    printf("Processing input...\n");
+    
+    return 0;
+}</p>
+                        <img src="/api/placeholder/750/400" alt="C Input Screenshot">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">Output for C</div>
+                    <div class="box-content">
+                        <p>
+Enter your name: John
+Enter your age: 25
+Processing input...
+Name: John
+Age: 25
+Status: Adult</p>
+                        <img src="/api/placeholder/750/400" alt="C Output Screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
