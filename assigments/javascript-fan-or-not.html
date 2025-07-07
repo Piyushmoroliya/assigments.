@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Javascript Fan</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-container {
+      width: 100vw;
+      height: 100vh;
+      background-color: #52357B;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .javascript-fan-container {
+      width: 90%;
+      max-width: 600px;
+      background-color: #A4CCD9;
+      border: 1px solid black;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .tittle {
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .display-box {
+      width: 100%;
+      height: auto;
+      min-height: 50px;
+      background-color: aquamarine;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+      margin: 10px 0 5px 0;
+      text-align: left;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0 auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #3b3b98;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .tittle {
+        font-size: 1.3rem;
+      }
+
+      .display-box {
+        font-size: 1rem;
+      }
+
+      label {
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="javascript-fan-container">
+      <h1 class="tittle">Javascript Fan Check</h1>
+      <h1 class="tittle">*Tell Me are you a Javascript Fan*</h1>
+
+      <br/>
+
+      <label>
+        <input type="radio" name="fan" id="js-fan" value="true" />
+        Yes, I Like Javascript
+      </label>
+
+      <label>
+        <input type="radio" name="fan" id="not-js-fan" value="false" />
+        No, I don't like Javascript
+      </label>
+
+      <button onclick="showResult()">Submit</button>
+
+      <div class="display-box" id="result"></div>
+
+      <script>
+        function showResult() {
+          const fan = document.querySelector('input[name="fan"]:checked')?.value;
+          document.getElementById("result").textContent = 
+            fan === "true" ? "Yes, You are a Javascript Fan!" : 
+            fan === "false" ? "No, You are not a Javascript Fan." : 
+            "Please select an option!";
+        }
+      </script>
+    </div>
+  </div>
+</body>
+</html>

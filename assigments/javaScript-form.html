@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Information Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-body {
+      width: 100vw;
+      height: 100vh;
+      background-color: #52357B;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .input-box, .output-box {
+      width: 45vw;
+      max-width: 500px;
+      min-width: 300px;
+      height: auto;
+      min-height: 400px;
+      padding: 20px;
+      border-radius: 15px;
+      border: 3px solid black;
+      box-sizing: border-box;
+    }
+
+    .input-box {
+      background-color: #0065F8;
+    }
+
+    .output-box {
+      background-color: #5459AC;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    input {
+      width: 80%;
+      height: 40px;
+      margin: 10px 0;
+      font-size: 1rem;
+      padding-left: 10px;
+      border: 1px solid black;
+      border-radius: 15px;
+      display: block;
+    }
+
+    button {
+      width: 60%;
+      height: 45px;
+      background-color: lightgreen;
+      font-size: 1rem;
+      border-radius: 10px;
+      margin: 20px auto 0 auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .main-body {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+      }
+
+      .input-box, .output-box {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      input, button {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-body">
+    <!-- Input section -->
+    <div class="input-box">
+      <blockquote>
+        <p>Student Information Form</p>
+      </blockquote>
+      <input type="text" id="inputone" placeholder="Enter your name" />
+      <input type="text" id="inputtwo" placeholder="Enter your Roll Number" />
+      <input type="text" id="inputthree" placeholder="Enter your Section" />
+      <input type="text" id="inputfour" placeholder="Enter your Gender" />
+      <input type="text" id="inputfive" placeholder="Enter your Program" />
+      <button onclick="inputFunction()">Submit</button>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-box">
+      <blockquote>
+        <p>Student Info Preview</p>
+        <p id="nameDisplay">Name:-</p>
+        <p id="rollDisplay">Roll Number:-</p>
+        <p id="sectionDisplay">Section:-</p>
+        <p id="genderDisplay">Gender:-</p>
+        <p id="programDisplay">Program:-</p>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- JavaScript Function -->
+  <script>
+    function inputFunction() {
+      var name = document.getElementById('inputone').value;
+      var roll = document.getElementById('inputtwo').value;
+      var section = document.getElementById('inputthree').value;
+      var gender = document.getElementById('inputfour').value;
+      var program = document.getElementById('inputfive').value;
+
+      document.getElementById('nameDisplay').innerHTML = "Name :- " + name;
+      document.getElementById('rollDisplay').innerHTML = "Roll Number :- " + roll;
+      document.getElementById('sectionDisplay').innerHTML = "Section :- " + section;
+      document.getElementById('genderDisplay').innerHTML = "Gender :- " + gender;
+      document.getElementById('programDisplay').innerHTML = "Program :- " + program;
+
+      alert("Name: " + name + "\nRoll Number: " + roll + "\nSection: " + section + "\nGender: " + gender);
+      console.log("Name:", name, "Roll:", roll, "Section:", section, "Gender:", gender, "Program:", program);
+    }
+  </script>
+</body>
+</html>

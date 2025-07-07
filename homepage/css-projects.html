@@ -1,253 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Projects</title>
-           <!-- Bootstrap link for CSS -->
-           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-       <!-- Bootstrap link for JS -->
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-           crossorigin="anonymous"></script>
-</head>
-<style>
-    body{
-        margin: 0%;
-        padding: 0%;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Projects</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
     }
-.main-container{
-    width: 100vw;
-    height: 100vh;
-}
-.header-container{
-    width: 100vw;
-    height: 40vh;
-    background-color:#00abf0; 
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-}
-.education-title{
-    font-size: 60px;
-    font-weight: bold;
-    color: white;  
-}
-.project-container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-.box-one{
-    width: 20vw;
-    height: 40vh;
-    background-color: blue;
-}
-.box-two{
-    width: 20vw;
-    height: 40vh;
-    background-color: green;
-}
-/* button css */
-button{
-    width: 10vw;
-    height: 5vh;
-}
-button{
-    border-radius: 20px;
-    margin-left: 45%;
-    background-color: #00abf0;
-    margin-bottom: 5%;
-}
-button:hover {
-    background-color: purple;
-    color: #00abf0;
-    border: 2px solid #00abf0;
-    transform: scale(1.05);
-}
-</style>
+
+    .main-container {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .header-container {
+      background-color: #081b29;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40vh;
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .education-title {
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .project-container {
+      width: 100vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 2rem;
+    }
+
+    button {
+      width: auto;
+      /* min-width: 150px; */
+      width: 45vh;
+      height: 7vh;
+      padding: 0 20px;
+      border-radius: 20px;
+      font-size: 25px;
+      background-color: #00abf0;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 171, 240, 0.3);
+    }
+
+    button:hover {
+      background-color: #0077b6;
+      /* A deeper shade of cyan-blue */
+      color: white;
+      border: 2px solid #00d4ff;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 171, 240, 0.5);
+    }
+
+
+    footer {
+      background-color: #081b29;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .card img {
+      object-fit: cover;
+    }
+  </style>
+</head>
+
 <body>
-    <div class="main-container">
-        <div class="header-container">
-           <span class="education-title">✨My CSS Projects</span>
-          
-
-        </div>
-        <section class="project-container">
-           <!-- Products -->
-      <div class="col" id="products">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">               
-              <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/my-products.html">  <img
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyS_Dq9BNmmZdrGj_-uUXaLWoHI90tnJQfvQ&s"
-                /></a>
-                <div class="card-body">
-                  <h3>Products</h3>
-                  <p class="card-text">This is an Product Page made with HTML and CSS, Grid.</p>
-                  
-                  
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                        <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/my-products.html"><button>Click here</button></a>
-                                          
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-             <!-- products end -->
-  
-      
-     <!-- Calculator -->
-      <div class="col">
-        <div class="card shadow-sm">
-         <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/calculater.html"> <img
-          class="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoIrwGVFuJVSEaaiF6af5SygMIXbcTMNNgvw&s"/></a>
-   
-   
-          <div class="card-body">
-            <h3>Calculator</h3>
-            <p class="card-text">This is an Calculator which is made by HTML and CSS.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-               <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/calculater.html"><button>Click here</button></a>
-          
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div> 
-      <!-- calculator end -->
-       <!-- Index Page  -->
-
-      <div class="col">
-        <div class="card shadow-sm">
-          <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/main-index-page.html"><img
-          class="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn0nXOit_X80gQ25uje1zXFe4qYd-6YdhrXQ&s"/></a>
-      
-      </rect><text x="50%" y="50%" 
-           fill="#eceeef" dy=".3em"></text></svg>
-          <div class="card-body">
-            <h3> First Home Page</h3>
-            <p class="card-text">This is My first Home page which is made with the help of HTML tabel.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-               <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/main-index-page.html"><button>Click here</button></a>
-          
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>   
-      <!-- Index Page End -->
-       <!-- Registration Form -->
-     
-      <div class="col">
-        <div class="card shadow-sm">
-         <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/login-page.html"><img
-          class="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          src="https://img.freepik.com/free-vector/modern-online-registration-compositio_23-2147993866.jpg"/></a>
-       
-      </rect><text x="50%" y="50%" 
-           fill="#eceeef" dy=".3em"></text></svg>
-          <div class="card-body">
-            <h3>Registration Form</h3>
-            <p class="card-text">This is an Registration Form which is made with the help of form tag of HTML and CSS.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-               <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/login-page.html"><button>Click here</button></a>
-          
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>    
-    <!-- Registration form end -->
-     <!-- Shop Website -->
-      
-      <div class="col">
-        <div class="card shadow-sm">
-          <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/shopping.html"><img
-          class="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          src="https://media.istockphoto.com/id/458725941/photo/apple-store-in-adelaide.jpg?s=612x612&w=0&k=20&c=Y9FUWiZ43TpJjJVs1E0Gmi7YSe5zJPQXyHGe11scEkk="/></a>
-      
-      </rect><text x="50%" y="50%" 
-           fill="#eceeef" dy=".3em"></text></svg>
-          <div class="card-body">
-            <h3>Apple Products</h3>
-            <p class="card-text">This is an Apple Products Website which is made by Grid of CSS  .</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-               <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/shopping.html"><button>Click here</button></a>
-          
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>     
-        <!-- Shop Website end -->   
-        <!-- News Paper Layout -->
-     
-      <div class="col">
-        <div class="card shadow-sm">
-         <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/grid-newpaper.html"><img
-          class="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          src="https://thumbs.dreamstime.com/b/handwriting-text-today-s-news-concept-meaning-latest-breaking-headlines-current-updates-trending-man-holding-megaphone-loudspe-126313774.jpg"/></a> 
-    
-      </rect><text x="50%" y="50%" 
-           fill="#eceeef" dy=".3em"></text></svg>
-          <div class="card-body">
-            <h3>Todays News</h3>
-            <p class="card-text">This is an TV news Templet which is made with the help of Grid of CSS .</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-               <a href="file:///Users/piyush/Desktop/piyush-2025-26/assigments/grid-newpaper.html"><button>Click here</button></a>
-          
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>         
-      
-        </section>
-        <a href="../index.html"><button>Go back</button>  </a>  
-                <!-- Footer -->
-                <footer style="background-color: #081b29; color: white; text-align: center; padding: 20px 0;">
-                    <p>© 2025 Piyush Moroliya. All Rights Reserved.</p>
-                </footer>
-        
+  <div class="main-container">
+    <div class="header-container">
+      <span class="education-title">✨My CSS Projects</span>
     </div>
 
-    
-    
+    <section class="project-container container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+        <!-- Product Page -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="../assigments/my-products.html">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyS_Dq9BNmmZdrGj_-uUXaLWoHI90tnJQfvQ&s"
+                class="card-img-top" height="225" />
+            </a>
+            <div class="card-body">
+              <h3>Products</h3>
+              <p>This is a Product Page made with HTML and CSS Grid.</p>
+              <a href="../assigments/my-products.html"><button>Click here</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="../assigments/calculater.html">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoIrwGVFuJVSEaaiF6af5SygMIXbcTMNNgvw&s"
+                class="card-img-top" height="225" />
+            </a>
+            <div class="card-body">
+              <h3>Calculator</h3>
+              <p>This is a body of Calculator made with HTML and CSS.</p>
+              <a href="../assigments/calculater.html"><button>Click here</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Index Page -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="../assigments/main-index-page.html">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn0nXOit_X80gQ25uje1zXFe4qYd-6YdhrXQ&s"
+                class="card-img-top" height="225" />
+            </a>
+            <div class="card-body">
+              <h3>First Home Page</h3>
+              <p>This is my first home page made with an HTML table.</p>
+              <a href="../assigments/main-index-page.html"><button>Click here</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="../assigments/login-page.html">
+              <img src="https://img.freepik.com/free-vector/modern-online-registration-compositio_23-2147993866.jpg"
+                class="card-img-top" height="225" />
+            </a>
+            <div class="card-body">
+              <h3>Registration Form</h3>
+              <p>This is a registration form created by form tag.</p>
+              <a href="../assigments/login-page.html"><button>Click here</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Shop Website -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="../assigments/shopping.html">
+              <img
+                src="https://media.istockphoto.com/id/458725941/photo/apple-store-in-adelaide.jpg?s=612x612&w=0&k=20&c=Y9FUWiZ43TpJjJVs1E0Gmi7YSe5zJPQXyHGe11scEkk="
+                class="card-img-top" height="225" />
+            </a>
+            <div class="card-body">
+              <h3>Apple Products</h3>
+              <p>This is an Apple products site built using CSS Grid.</p>
+              <a href="../assigments/shopping.html"><button>Click here</button></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Paper Layout -->
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="../assigments/grid-newpaper.html">
+              <img
+                src="https://thumbs.dreamstime.com/b/handwriting-text-today-s-news-concept-meaning-latest-breaking-headlines-current-updates-trending-man-holding-megaphone-loudspe-126313774.jpg"
+                class="card-img-top" height="225" />
+            </a>
+            <div class="card-body">
+              <h3>Today's News</h3>
+              <p>This is a TV news template made using CSS Grid.</p>
+              <a href="../assigments/grid-newpaper.html"><button>Click here</button></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mb-4">
+      <a href="../index.html"><button>Go back</button></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Piyush Moroliya. All Rights Reserved.</p>
+    </footer>
+  </div>
 </body>
+
 </html>

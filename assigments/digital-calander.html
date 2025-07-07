@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Calendar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'WDXL Lubrifont TC', sans-serif;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            background-color: #CA7842;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .display-box {
+            width: 100%;
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 234, 0);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .display-box span {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #display {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        .btn-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem 1rem;
+        }
+
+        .btn {
+            height: 50px;
+            width: 140px;
+            background-color: #5459AC;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #434799;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(84, 89, 172, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(84, 89, 172, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .display-box span {
+                font-size: 2rem;
+            }
+
+            #display {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                width: 120px;
+                height: 45px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                width: 100px;
+                font-size: 0.8rem;
+            }
+
+            .display-box span {
+                font-size: 1.5rem;
+            }
+
+            #display {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container" id="main-container">
+        <div class="display-box" id="display-box">
+            <span>Welcome to Universal Calendar</span>
+            <p id="display"></p>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn" id="Sunday" onclick="displaySunday()">Sunday</button>
+            <button class="btn" id="Monday" onclick="displayMonday()">Monday</button>
+            <button class="btn" id="Tuesday" onclick="displayTuesday()">Tuesday</button>
+            <button class="btn" id="Wednesday" onclick="displayWednesday()">Wednesday</button>
+            <button class="btn" id="Thursday" onclick="displayThursday()">Thursday</button>
+            <button class="btn" id="Friday" onclick="displayFriday()">Friday</button>
+            <button class="btn" id="Saturday" onclick="displaySaturday()">Saturday</button>
+        </div>
+    </div>
+
+    <script>
+        function displaySunday() {
+            document.getElementById("display").innerHTML = "Today is Sunday!";
+            document.getElementById("main-container").style.backgroundColor = "#6FE6FC";
+            document.getElementById("display-box").style.backgroundColor = "#F5ECD5";
+            document.getElementById("Sunday").style.backgroundColor = "#1DCD9F";
+        }
+
+        function displayMonday() {
+            document.getElementById("display").innerHTML = "Today is Monday!";
+            document.getElementById("main-container").style.backgroundColor = "#DA6C6C";
+            document.getElementById("display-box").style.backgroundColor = "#CD5656";
+            document.getElementById("Monday").style.backgroundColor = "#AF3E3E";
+        }
+
+        function displayTuesday() {
+            document.getElementById("display").innerHTML = "Today is Tuesday!";
+            document.getElementById("main-container").style.backgroundColor = "#5A827E";
+            document.getElementById("display-box").style.backgroundColor = "#84AE92";
+            document.getElementById("Tuesday").style.backgroundColor = "#B9D4AA";
+        }
+
+        function displayWednesday() {
+            document.getElementById("display").innerHTML = "Today is Wednesday!";
+            document.getElementById("main-container").style.backgroundColor = "#52357B";
+            document.getElementById("display-box").style.backgroundColor = "#5459AC";
+            document.getElementById("Wednesday").style.backgroundColor = "#648DB3";
+        }
+
+        function displayThursday() {
+            document.getElementById("display").innerHTML = "Today is Thursday!";
+            document.getElementById("main-container").style.backgroundColor = "#FFDCDC";
+            document.getElementById("display-box").style.backgroundColor = "#FFF2EB";
+            document.getElementById("Thursday").style.backgroundColor = "#FFD6BA";
+        }
+
+        function displayFriday() {
+            document.getElementById("display").innerHTML = "Today is Friday!";
+            document.getElementById("main-container").style.backgroundColor = "#7F8CAA";
+            document.getElementById("display-box").style.backgroundColor = "#B8CFCE";
+            document.getElementById("Friday").style.backgroundColor = "#333446";
+        }
+
+        function displaySaturday() {
+            document.getElementById("display").innerHTML = "Today is Saturday!";
+            document.getElementById("main-container").style.backgroundColor = "#4B352A";
+            document.getElementById("display-box").style.backgroundColor = "#CA7842";
+            document.getElementById("Saturday").style.backgroundColor = "#B2CD9C";
+        }
+    </script>
+</body>
+
+</html>

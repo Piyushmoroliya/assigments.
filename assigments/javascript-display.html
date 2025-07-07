@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Output class</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        .input-field {
+            max-width: 90%;
+            width: 500px;
+            height: auto;
+            background-color: #F4E7E1;
+            padding: 20px;
+            margin: 10% auto;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            background-color: lightgreen;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #90ee90;
+        }
+
+        p {
+            text-align: center;
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            p {
+                font-size: 22px;
+            }
+
+            input,
+            button {
+                font-size: 18px;
+                height: 45px;
+            }
+
+            .input-field {
+                margin-top: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p id="result">Output of an Program is:-</p>
+    <div class="input-field">
+        <p id="display"></p>
+        <input type="text" id="input" placeholder="Enter the Anything">
+        <button onclick="inputFunction()">Submit</button>
+    </div>
+
+    <script>
+        var number = 10;
+
+        function inputFunction() {
+            var number = document.getElementById('input').value;
+            document.getElementById('display').innerHTML = number;
+            alert(number);
+            console.log(number);
+        }
+    </script>
+</body>
+
+</html>

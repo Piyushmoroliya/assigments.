@@ -1,0 +1,390 @@
+html {
+    scroll-behavior: smooth;
+
+  }
+
+.main-box {
+    width: 100vw;
+    height: 700vh;
+    margin: 0%;
+    padding: 0%;
+}
+
+.inner-box {
+    width: 100vw;
+    height: 70vh;
+    margin: 0%;
+    background-color: aqua;
+    margin-top: -2%;
+}
+
+.nevbar-styling {
+    font-size: 15px;
+    color: black;
+}
+
+/* About section CSS */
+.about-box {
+    width: 98%;
+    height: 35vh;
+    margin: 0%;
+    /* background-color: aqua; */
+    border: 1px solid black;
+    margin-left: 1%;
+}
+
+h1 {
+    font-family: "Funnel Display", sans-serif;
+    font-size: 55px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Funnel Display", sans-serif;
+    color: grey;
+}
+
+.about-box-image {
+    width: 95vw;
+    height: 70vh;
+    background-color: aqua;
+    margin-left: 2%;
+}
+
+/* Admissions section */
+.main-admissions-box {
+    width: 98vw;
+    height: 50vh;
+    margin: 0%;
+    margin-left: 1%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Admissions-first-box {
+    width: 100vw;
+    height: 61vh;
+    margin: 0%;
+    /* margin-left: 1%; */
+    border: 5px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-box-one {
+    width: 40vw;
+    height: 60vh;
+    margin: 0%;
+    background-color: lightblue;
+    border: 5px solid black;
+}
+img:hover{
+    transform: scale(1.05);
+    box-shadow:  0 4px 8px 16px rgba(red, green, blue, alpha);
+    background-color: lightblue;
+}
+
+.image-box-second {
+    width: 60vw;
+    height: 60vh;
+    margin: 0%;
+    /* background-color: lightgreen; */
+}
+
+.Admissions-heading {
+    text-align: center;
+    font-size: 35px;
+    /* margin-right: 65%; */
+    color: black;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+     font-family: "Funnel Display", sans-serif;
+}
+.Admissions-paragraph{
+    font-size: 20px;
+    color: black;
+}
+button{
+    background-color: lightcoral;
+    color: black;
+    padding: 10px 20px;
+    border: solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 45%;
+    font-size: 20px;
+}
+button:hover{
+    background-color: orange;
+}
+/* caurses section */
+.Courses-box{
+    width: 100vw;
+    height:50vh;
+    margin: 0%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+.caurses-box-one{
+    width: 20vw;
+    height:50vh;
+    margin: 0;
+    border: 5px solid black;
+    margin-left: 5%;
+}
+.caurses-box-two{
+    width: 20vw;
+    height:50vh;
+    margin: 0;
+    border: 5px solid black;
+}
+.caurses-box-three{
+    width: 20vw;
+    height:50vh;
+    margin: 0;
+    border: 5px solid black;
+}
+.caurses-box-four{
+    width: 20vw;
+    height:50vh;
+    margin: 0;
+    border: 5px solid black;
+    margin-right: 5%;
+}
+.caurses-heading{
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 35px;
+}
+/* facility */
+.fabric-box{
+    width: 90vw;
+    height: 20vh;
+    margin: 0%;
+    margin-left: 5%;
+    /* border: 1px solid black; */
+}
+.fabric-box-one{
+    width: 90vw;
+    height: 20vh;
+    margin: 0%;
+    margin-left: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+.text-box-one{
+    width:30vw;
+    height: 20vh;
+    margin: 0%;
+    /* border: 1px solid black; */
+}
+.text-box-two{
+    width:30vw;
+    height: 20vh;
+    margin: 0%;
+    /* border: 1px solid black; */
+}
+.text-box-three{
+    width:30vw;
+    height: 20vh;
+    margin: 0%;
+    /* border: 1px solid black; */
+}
+/* contact css */
+ /* contact section css */
+ .contact {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-content {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+  }
+
+  .contact-text {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-text-text {
+    width: 40%;
+    height: 90%;
+    border: 5px solid aqua;
+  }
+
+  .contact-text-text h1 {
+    margin-left: 25%;
+    font-size: 45px;
+    color: aqua;
+  }
+
+  .contact-text-text h2 {
+    margin-left: 15%;
+    color: white;
+    font-size: 35px;
+  }
+
+  .contact-text-text a {
+    margin-left: 30%;
+    font-style: italic;
+    font-size: 30px;
+    ;
+  }
+
+  .contact-map {
+    width: 40%;
+    height: 90%;
+    border: 5px solid aqua;
+  }
+
+  .contact-icon {
+    width: 90%;
+    height: 20%;
+
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-icon i {
+    font-size: 50px;
+    color: aqua;
+  }
+
+/* button */
+button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #17C3B2;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #17C3B2;
+  }
+
+  button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+  }
+
+  button:hover::before {
+    width: 105%;
+  }
+
+  button:hover {
+    color: #111;
+  }
+   /* icon CSS*/
+   .logo-sec {
+    margin-left: 300px;
+}
+
+.logo-img {
+    margin-left: 40px;
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background-color: #111;
+    color: white;
+    padding: 30px 0;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    font-family: "Funnel Display", sans-serif;
+}
+
+.footer-left h4 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 18px;
+    color: #bbb;
+}
+
+.footer-right {
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    font-size: 18px;
+}
+
+.footer-links a {
+    color: #17C3B2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff6600;
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-left,
+    .footer-right {
+        margin-bottom: 20px;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 10 Notes</title>
+  <style>
+    body {
+        font-family: "Poppins", Arial, sans-serif;
+        background: linear-gradient(to bottom, #2a0845, #6441a5);
+        color: #e0d7f5;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: rgba(50, 50, 75, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+  
+      h1 {
+        color: #e4baff;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+  
+      .subject-selector,
+      .social-science-dropdown {
+        margin: 20px 0;
+      }
+  
+      select {
+        padding: 12px 18px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        background: #7c4dff;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+  
+      select:hover {
+        background: #5e35b1;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+  
+      ul li {
+        background: rgba(90, 70, 130, 0.8);
+        margin: 15px 0;
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+      }
+  
+      ul li:hover {
+        background: #6a47b0;
+        transform: scale(1.02);
+      }
+  
+      ul li span {
+        font-size: 18px;
+        font-weight: 600;
+      }
+  
+      .action-buttons {
+        display: none;
+        gap: 12px;
+      }
+  
+      .action-buttons button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+  
+      .download-btn {
+        background: linear-gradient(to right, #7e57c2, #5c6bc0);
+        color: #fff;
+      }
+  
+      .download-btn:hover {
+        background: linear-gradient(to right, #5c6bc0, #3f51b5);
+      }
+  
+      .view-btn {
+        background: linear-gradient(to right, #ab47bc, #8e24aa);
+        color: #fff;
+      }
+  
+      .view-btn:hover {
+        background: linear-gradient(to right, #8e24aa, #7b1fa2);
+      }
+  
+      .download-all-btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(to right, #7c4dff, #6200ea);
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      }
+  
+      .download-all-btn:hover {
+        background: linear-gradient(to right, #5e35b1, #512da8);
+        transform: translateY(-3px);
+      }
+  
+      .hidden {
+        display: none;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Class 10 - Notes</h1>
+
+    <!-- Subject Selector -->
+    <div class="subject-selector">
+      <label for="subject">Select Subject: </label>
+      <select id="subject">
+        <option value="mathematics">Mathematics</option>
+        <option value="science">Science</option>
+        <option value="social-science">Social Science</option>
+        <option value="english">English</option>
+      </select>
+    </div>
+
+    <!-- Social Science Dropdown -->
+    <div class="social-science-dropdown hidden">
+      <label for="social-science-topic">Select Topic: </label>
+      <select id="social-science-topic">
+        <option value="history">History</option>
+        <option value="civics">Civics</option>
+        <option value="geography">Geography</option>
+        <option value="economics">Economics</option>
+      </select>
+    </div>
+
+    <!-- Chapters List -->
+    <ul id="chapters-list">
+      <!-- Chapters will be dynamically added here -->
+    </ul>
+
+    <!-- Download All Button -->
+    <button class="download-all-btn" id="download-all-btn">Read All Chapters</button>
+  </div>
+
+  <script>
+    // Data for subjects and chapters (Class 8 NCERT Chapters)
+    const data = {
+      mathematics: [
+        "Chapter 1:  Real Numbers",
+        "Chapter 2: Pair of Linear Equations in Two Variables",
+        "Chapter 3:  Coordinate Geometry",
+        "Chapter 4:  Arithmetic Progressions",
+        "Chapter 5: Coordinate Geometry",
+        "Chapter 6: Some Applications of Trigonometry",
+        "Chapter 7:   Areas Related to Circles",
+        "Chapter 8:  Statistics Notes",
+        "Chapter 9: Polynomials Notes",
+        "Chapter 10:  Quadratic Equations",
+        "Chapter 11:  Triangles"
+      ],
+      science: [
+    "Chapter 1 – Chemical Reactions and Equations",
+    "Chapter 2 – Acids, Bases and Salts",
+    "Chapter 3 – Metals and Non-metals",
+    "Chapter 4 – Carbon and Its Compounds",
+    "Chapter 5 – Life Processes",
+    "Chapter 6 – Control and Coordination",
+    "Chapter 7 – How Do Organisms Reproduce?",
+    "Chapter 8 – Heredity and Evolution",
+    "Chapter 9 – Light Reflection and Refraction",
+    "Chapter 10 – Human Eye and Colourful World",
+    "Chapter 11 – Electricity",
+    "Chapter 12 – Magnetic Effects of Electric Current",
+    "Chapter 13 – Our Environment",
+      ],
+      english: [
+      "Chapter 1: A Letter to God Summary",
+      "Chapter 2: Nelson Mandela: Long Walk to Freedom Summary",
+     "Chapter 3: Two Stories about Flying Summary",
+     "Chapter 4: From the Diary of Anne Frank Summary",
+    "Chapter 5: Glimpses of India Summary",
+    "Chapter 6: Mijbil the Otter Summary",
+    "Chapter 7: Madam Rides the Bus Summary",
+    "Chapter 8: The Sermon at Benares Summary",
+    "Chapter 9: The Proposal Summary",
+      ],
+      "social-science": {
+        history: [
+        "Chapter 1: The Rise of Nationalism in Europe",
+       "Chapter 2: Nationalism in India", 
+       "Chapter 3: The Making of a Global World",
+      "Chapter 4: The Age of Industrialisation",
+        "Chapter 5: Print Culture and The Modern World",
+        ],
+        civics: [
+        "Chapter 1: Power Sharing",
+        "Chapter 2: Federalism",
+        "Chapter 3: Gender, Religion and Caste",
+        "Chapter 4: Political Parties",
+        "Chapter 5: Outcomes of Democracy",
+        ],
+        geography: [
+        "Chapter 1: Resources and Development",
+        "Chapter 2: Forest and Wildlife Resources",
+         "Chapter 3: Water Resources",
+        "Chapter 4: Agriculture",
+        "Chapter 5: Minerals and Energy Resources",
+        "Chapter 6: Manufacturing Industries",
+        "Chapter 7: Lifelines of National Economy",
+        ],
+        economics: [
+        "Chapter 1: Development",
+        "Chapter 2: Sectors of the Indian Economy",
+        "Chapter 3: Money and Credit",
+        "Chapter 4: Globalisation and the Indian Economy",
+        "Chapter 5: Consumer Rights",
+        ]
+      }
+    };
+
+    // Reference to elements
+    const subjectSelect = document.getElementById("subject");
+    const socialScienceDropdown = document.querySelector(".social-science-dropdown");
+    const socialScienceTopic = document.getElementById("social-science-topic");
+    const chaptersList = document.getElementById("chapters-list");
+
+    // Populate chapters for the selected subject/topic
+    function populateChapters(subject, topic = null) {
+      chaptersList.innerHTML = ""; // Clear existing chapters
+
+      let chapters;
+
+      if (subject === "social-science" && topic) {
+        chapters = data[subject][topic] || [];
+      } else {
+        chapters = data[subject] || [];
+      }
+
+      chapters.forEach(chapter => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+          <span>${chapter}</span>
+          <div class="action-buttons">
+            <button class="view-btn">View</button>
+            <button class="download-btn">Download</button>
+          </div>
+        `;
+
+        // Add click event to toggle action buttons
+        li.addEventListener("click", () => {
+          const buttons = li.querySelector(".action-buttons");
+          buttons.style.display = buttons.style.display === "flex" ? "none" : "flex";
+        });
+
+        chaptersList.appendChild(li);
+      });
+    }
+
+    // Handle subject selection
+    subjectSelect.addEventListener("change", function () {
+      const subject = this.value;
+
+      // Show or hide Social Science dropdown
+      if (subject === "social-science") {
+        socialScienceDropdown.classList.remove("hidden");
+        populateChapters(subject, socialScienceTopic.value);
+      } else {
+        socialScienceDropdown.classList.add("hidden");
+        populateChapters(subject);
+      }
+    });
+
+    // Handle Social Science topic selection
+    socialScienceTopic.addEventListener("change", function () {
+      populateChapters("social-science", this.value);
+    });
+
+    // Initialize with Mathematics
+    populateChapters("mathematics");
+  </script>
+</body>
+
+</html>

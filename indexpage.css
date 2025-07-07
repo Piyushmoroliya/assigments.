@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -6,9 +6,10 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbar */
 }
 
 /* Main container */
@@ -20,17 +21,27 @@ body {
 }
 
 /* Header */
+/* Main Header */
 .main-header {
     width: 100%;
     height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #00abf0;
+    background-color: #00acf0;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Scrolled header */
+.main-header.scrolled {
+    background-color: rgba(0, 172, 240, 0.7);
+    /* slightly transparent */
+    backdrop-filter: blur(4px);
+    /* adds subtle blur */
 }
 
 /* Logo */
@@ -84,7 +95,7 @@ body {
     left: 0;
     height: 3px;
     width: 0%;
-    background-color:#081b29;
+    background-color: #081b29;
     border-radius: 2px;
     transition: width 0.3s ease;
 }
@@ -98,11 +109,43 @@ body {
     width: 100%;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .nev-links {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .nev-links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nev-links ul li a {
+        font-size: 18px;
+    }
+}
+
+
+
 /* home section one css start */
 .home-container {
     width: 100%;
     height: 100vh;
-    background:#081b29;
+    background: #081b29;
     margin: 0;
     padding: 0;
     display: flex;
@@ -137,6 +180,39 @@ body {
     margin-bottom: 40px;
 }
 
+/* animation start  */
+/* General animation setup */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animate the text box content */
+.home-text-box .home-text-style {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.home-text-box .home-text-style-two {
+    animation: fadeInUp 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animate buttons (if you want to include them subtly) */
+.home-text-box a button {
+    animation: fadeInUp 2s ease-out forwards;
+    opacity: 0;
+}
+
+/* animation ends */
+/* button one */
 button {
     width: auto;
     min-width: 150px;
@@ -149,14 +225,22 @@ button {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 171, 240, 0.3);
 }
 
 button:hover {
-    background-color: purple;
-    color: #00abf0;
-    border: 2px solid #00abf0;
+    background-color: #0077b6; /* A deeper shade of cyan-blue */
+    color: white;
+    border: 2px solid #00d4ff;
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 171, 240, 0.5);
 }
+
+
+/* button two */
+/* From Uiverse.io by Na3ar-17 */
+
+
 /* home section one css end */
 
 /* About section CSS */
@@ -187,8 +271,9 @@ button:hover {
 }
 
 .about-title {
-   font-size: 35px;
-   margin-bottom: 20px;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-right: 5%;
 }
 
 .about-image-box {
@@ -211,12 +296,13 @@ button:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.hr-style {
+.about-hr-style {
     width: 100px;
     height: 3px;
     background-color: #00abf0;
     border-radius: 20px;
-    margin: 10px 0 30px 0;
+    margin-left: 10%;
+    margin-top: -1%;
     border: none;
 }
 
@@ -236,8 +322,14 @@ button:hover {
     margin-bottom: 10px;
 }
 
+.skills-text-style {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
 /* this is the row of skills box */
-.skills-row-one, 
+.skills-row-one,
 .skills-row-two {
     width: 90%;
     display: flex;
@@ -254,7 +346,7 @@ button:hover {
     background-color: #00abf0;
     border: none;
     margin: 10px auto;
-    
+
 }
 
 /* inner boxes css */
@@ -269,7 +361,7 @@ button:hover {
 .row-two-fourth-box,
 .row-two-fift-box {
     width: 250px;
-    height: 350px;
+    height: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: center;
@@ -298,75 +390,13 @@ button:hover {
     font-size: 24px;
 }
 
-/* Project section css */
-.project-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 0;
-}
-.hr-style-project{
-    width: 100px;
-    height: 3px;
+/* projects section css  */
+.main-project-container {
+    width: 100vw;
+    height: 70vh;
+    margin: 0%;
+    padding: 0%;
     background-color: #00abf0;
-    border-radius: 20px;
-    margin-top: -2%;
-}
-
-.project-tittle {
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-.project-main-box {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-/* projects containers */
-.project-box-one,
-.project-box-two,
-.project-box-three {
-    width: 30%;
-    min-width: 300px;
-    height: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-}
-
-/* hover for projects box */
-.project-box-one:hover,
-.project-box-two:hover,
-.project-box-three:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background-color: white;
-}
-
-/* images/logo of projects */
-.image-box-of-project {
-    width: 100%;
-    height: 55%;
-    border-radius: 20px 20px 0 0;
-    object-fit: cover;
-}
-
-.project-box-tittle {
-    text-align: center;
-    font-size: 30px;
-    color: #00abf0;
-    margin: 20px 0 10px 0;
 }
 
 /* contact section css */
@@ -439,7 +469,7 @@ button:hover {
     font-weight: bold;
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
     padding: 10px;
     border-radius: 5px;
@@ -450,65 +480,230 @@ button:hover {
     min-height: 150px;
 }
 
-/* Contact info content */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Project section title */
+.project-section-tittle {
+    text-align: center;
 }
 
-.info-title {
-    font-size: 24px;
-    color: #00abf0;
-    margin-bottom: 20px;
-}
-
-.info-item {
+/* Main container */
+.project-container {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 2vh 0;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    justify-content: center;
 }
 
-.info-icon {
-    font-size: 24px;
-    color: #00abf0;
+/* Grid container */
+.project-items-container {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 15px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .about-image,
-    .about-text {
-        width: 90%;
+/* Common style for all project boxes */
+.project-box-one,
+.project-box-two,
+.project-box-three,
+.project-box-four,
+.project-box-five,
+.project-box-six {
+    width: 100%;
+    height: 35vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hover effect */
+.project-box-one:hover,
+.project-box-two:hover,
+.project-box-three:hover,
+.project-box-four:hover,
+.project-box-five:hover,
+.project-box-six:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Project title style */
+.project-items-tittle {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1024px) {
+    .project-items-container {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
-    .About-section {
-        flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    .project-items-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-box-one,
+    .project-box-two,
+    .project-box-three,
+    .project-box-four,
+    .project-box-five,
+    .project-box-six {
         height: auto;
     }
-    
+}
+
+/* Projects Section css ends */
+
+/* Footer start */
+footer {
+    background-color: #081b29;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 5%;
+}
+
+/* responsive code for all elements  */
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+
+    .logo,
+    .nev-links {
+        width: 50%;
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .nev-links ul {
+        gap: 20px;
+    }
+
+    .home-text-box {
+        width: 90%;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .about-title,
+    .about-hr-style {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .about-image-box {
+        width: 80%;
+        height: auto;
+    }
+
     .project-box-one,
     .project-box-two,
     .project-box-three {
-        width: 80%;
+        width: 45%;
     }
-    
+
     .form-box,
     .id-box {
         width: 100%;
     }
-    
-    .contact-box {
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 768px) {
-    .nev-links ul {
-        gap: 15px;
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
     }
-    
-    .nev-links ul li a {
+
+    .logo,
+    .nev-links {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .nev-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-text-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .animated-button {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .About-section {
+        flex-direction: column;
+    }
+
+    .skills-row-one,
+    .skills-row-two {
+        gap: 20px;
+    }
+
+    .project-box-one,
+    .project-box-two,
+    .project-box-three {
+        width: 100%;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text-style {
+        font-size: 32px;
+    }
+
+    .home-text-style-two {
         font-size: 18px;
+    }
+
+    .animated-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .skills-box-tittle,
+    .project-box-tittle {
+        font-size: 20px;
+    }
+
+    .form-box,
+    .id-box {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
     }
 }

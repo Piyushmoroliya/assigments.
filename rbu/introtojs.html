@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Actions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Interactive Buttons</h2>
+
+    <!-- Button to show alert message -->
+    <button onclick="showAlert()">Click me for Alert</button>
+
+    <p id="paragraph">This is the original content of the paragraph.</p>
+
+    <!-- Button to change paragraph content -->
+    <button onclick="changeParagraphContent()">Change Paragraph Content</button>
+
+    <script>
+        // Function to display an alert message when button is clicked
+        function showAlert() {
+            alert("Hello! This is an alert message.");
+        }
+
+        // Function to change the content of the paragraph when button is clicked
+        function changeParagraphContent() {
+            document.getElementById("paragraph").innerHTML = "The content of this paragraph has been changed!";
+        }
+    </script>
+
+</body>
+</html>

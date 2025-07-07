@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Genzezz</title>
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         body {
             width: 100vw;
             height: 200vw;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
         #h1 {
@@ -29,11 +33,14 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             border: 3px solid black;
+            position: fixed;
+            background-color: rgba(173, 216, 230, 0.744);
         }
 
         #logo {
             width: 100%;
             height: 80%;
+            text-decoration: none;
         }
 
         #header-links {

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .main-box{
+            height: 210vh;
+            width: 50vw;
+            border: 5px solid black;
+            margin-left: 25%;
+            background-color: lightblue;
+            display: flex;
+        }
+        .text-css{
+        text-align: center;
+            font-size: 45px;
+          margin-left: 1%;
+            
+        }
+        .text-css-second{
+            text-align: center;
+            font-size: 25px;
+        }
+        .legend-style{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .label-style{
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .image-box{
+            width:30vw ;
+            height: 20vh;
+            margin-left: 20%;
+        }
+        /* submit */
+
+    /* submit-CSS */
+    .submitBtn {
+      width: 120px;
+      height: 40px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(to left, rgb(230, 35, 0), rgb(255, 174, 0));
+      letter-spacing: 0.7px;
+    }
+
+    .submitBtn:hover .arrow {
+      animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    @keyframes slide-in-left {
+      0% {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+
+    .submitBtn:active {
+      transform: scale(0.97);
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="main-box">
+    <form>
+        <h1 class="text-css">Ramdeobaba University Nagpur</h1>       
+        <p class="text-css-second">*Students Registration Form*</p>
+
+        <div class="image-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZxqpkCX3BFPKbo2NOnvaFB-uGg5O6iJaNbw&s"
+            height="100%" width="100%">
+        </div>
+        <br>
+
+        <!-- personal information section -->
+        <fieldset>
+            <legend class="legend-style">Personal Information</legend>
+            <br>  
+            <label class="label-style" for="text" id="Name">First Name:</label>
+            <input type="text" name="" >
+            <br>
+            <br>
+            <label class="label-style" for="text" id="Name">Middle Name:</label>
+            <input type="text">
+            <br>
+            <br>
+            <label class="label-style" for="text" id="Name">Last Name:</label>
+            <input type="text" name="">
+            <br>
+            <br>
+            <label class="label-style" for="date" id="date">Date of birth:</label>
+            <input type="date" id="date">
+            <br>
+            <br>
+            <label class="label-style">Gender:</label><br>
+            <input type="radio" id="male" name="Gender" 
+            value="male" required>
+
+            <label class="label-style" for="male"> Male</label><br>
+
+            <input type="radio" id="Female" name="Gender" 
+            value="Female" required>
+            <label class="label-style" for="Female">Female</label><br>
+            <input type="radio" id="others" name="Gender"
+            value="others required">
+            <label class="label-style" for="others">others</label> <br>
+            <!-- state dropdown -->
+             <br>
+             <label class="label-style" for="state"> Select your state:</label>
+             <select name="state" id="state" required>
+                <option value="select">Maharshtra</option>
+                <option value="select">Gujrat</option>
+                <option value="select">Rajasthan</option>
+                <option value="select">Goa</option>
+                <option value="select">Panjab</option>
+                <option value="select">Sikkam</option>
+                <option value="select">Tamil Nadu</option>
+                <option value="select">Bihar</option>
+                <option value="select">U.P</option>
+                <option value="select">M.p</option>
+            </select>
+        </fieldset>
+        <br>
+        <br>
+        <!-- technical detels -->
+         <fieldset>
+            <legend class="legend-style">Education</legend>
+            <br>
+            <label  class="label-style" for="text">Institute:</label>
+            <input type="text" id="Education">
+            <br>
+            <br>
+            <label  class="label-style" for="text">Current digree:</label>
+            <input type="text" id="Education">
+            <br>
+            <br>
+            <label  class="label-style" for="text">Expected Year of Graduation:</label>
+            <input type="text" id="Education">
+         </fieldset>
+         <br>
+         <br>
+         <!-- skills section -->
+          <fieldset>
+            <legend class="legend-style"> List your skills:</legend>
+            <label class="label-style"  for="text" id="skills">Skills:</label><br>
+            <textarea name="skills" id="skills" rows="5" cols="50"></textarea>       
+          </fieldset>
+          <br>
+          <br>
+          <!-- hobbies -->
+          <fieldset>
+            <legend class="legend-style"> Hobbies:</legend><br>
+            <label class="label-style">Hobbies:-</label>
+
+            <label class="label-style">Drawing</label>
+            <input type="radio">
+            <label class="label-style">Singing</label>
+            <input type="radio">
+            <label class="label-style">Sketching</label>
+            <input type="radio">
+            <label class="label-style">Sports</label>
+            <input type="radio">
+            <br>
+            <br>    
+          </fieldset>
+          <!-- qualification -->
+           <fieldset>
+            <br>
+           <legend class="legend-style">qualifications</legend>
+           <label class="label-style">Your qualification:-</label>
+            <br>
+            <table>
+                <tr>
+                    <th>SI.NO.</th>
+                    <th>Examination</th>
+                    <th>Borad</th>
+                    <th>Percetage</th>
+                    <th>Year of passing</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Class 10th</td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Class 12th</td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Graduation </td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Masters</td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <br> 
+        </fieldset>
+        <br>
+        <!-- submit -->
+        <button style="margin-left: 40%;" class="submitBtn">
+            Submit
+            <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow">
+              <path
+                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
+              </path>
+            </svg>
+          </button>
+
+
+       
+    </form>
+ </div>
+    
+</body>
+</html>

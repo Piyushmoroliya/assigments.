@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>form making</title>
+    <style>
+        body {
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0;
+            padding: 10px;
+        }
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        @page {
+            size: 21cm 29.7cm;
+            margin: 0;
+        }
+
+        page {
+            background-color: white;
+            display: block;
+            max-width: 0 auto;
+            position: relative;
+            margin-left: 40%;
+            padding: 10px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .label-style {
+            font-size: 30px;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        .input-field {
+            width: 300px;
+            height: 40px;
+            background-color: lightblue;
+        }
+
+        .fieldset-style {
+            font-size: 30px;
+            font-family: "Playwrite ES", Georgia, 'Times New Roman', Times, serif;
+            color: brown;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <page size="A4">
+
+        <div>
+
+            <form style="border: solid; padding: 10px;">
+
+                <!-- <fieldset> -->
+                <legend style="text-align: center;">
+
+                    <div>
+                        <h1 class="heading">*Admission Form*</h1>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBGs5S5uuYq_HhL1K3hjmchMV_-XhWzYquGocFccbsXoUTpHZrhdwf8YN1TmoVftz33Wk&usqp=CAU"
+                            width="200px" height="200px" />
+
+                    </div>
+                </legend>
+
+                <h1 class="heading">*STANFORD UNIVERSITY*</h1>
+
+                <br>
+                <!-- #personal detels-->
+                <h1 class="fieldset-style">*Personal detels:-</h1>
+                <label class="label-style">First name:-</label>
+                <input type="text" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">Middle name:-</label>
+                <input type="text" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">Last name:-</label>
+                <input type="text" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">Date of birth:-</label>
+                <input type="date" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">Contact number:-</label>
+                <input type="number" class="input-field">
+
+                <h1 class="fieldset-style">*Gender:-</h1>
+                <label class="label-style">male</label>
+                <input type="radio">
+
+                <label class="label-style">Female</label>
+                <input type="radio">
+
+                <label class="label-style">Others</label>
+                <input type="radio">
+
+
+                <!-- #email and passward-->
+                <h1 class="fieldset-style">*Email and passward</h1>
+                <br>
+                <label class="label-style">Email:-</label>
+                <input type="email" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">Passward:-</label>
+                <input type="password" class="input-field">
+                <br>
+
+                <!-- #courses-->
+                <h1 class="fieldset-style">*Courses:-</h1>
+                <label class="label-style">pick a course:-</label>
+                <select name="Batch" class="input-field">
+                    <option>Computer science</option>
+                    <option>Information Technology</option>
+                    <option>Meachnical</option>
+                    <option>Electrical</option>
+                    <option>Civil</option>
+                    <option>Chemical</option>
+                    <option>Textile</option>
+                </select>
+                <br>
+
+                <!-- #Entrance tests-->
+                <h1 class="fieldset-style">*Entrance Tests If any given:-</h1>
+
+                <label class="label-style">JEE</label>
+                <input type="radio">
+
+                <label class="label-style">CET</label>
+                <input type="radio">
+
+                <label class="label-style">CUET</label>
+                <input type="radio">
+
+                <label class="label-style">RUBEE</label>
+                <input type="radio">
+
+                <label class="label-style">GATE</label>
+                <input type="radio">
+
+                <!-- #Score-->
+                <h1 class="fieldset-style">*Your Results:-</h1>
+                <label class="label-style">12th board score:-</label>
+                <input type="number" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">JEE score:-</label>
+                <input type="number" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">CET(pcm) score:-</label>
+                <input type="number" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">CUET score:-</label>
+                <input type="number" class="input-field">
+                <br>
+                <br>
+                <label class="label-style">GATE score:-</label>
+                <input type="number" class="input-field">
+
+            </form>
+        </div>
+    </page>
+</body>
+
+</html>

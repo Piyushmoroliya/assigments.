@@ -1,13 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Piyush's Portfolio</title>
+    <!-- bootstrap links of css -->
+     
+    <link rel="stylesheet" href="indexpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9134/9134408.png">
 </head>
 <body>
-    <h1>Assignment Number 1</h1>
-    <a href="./assignments/Input-output.html">I/O Programs</a>
-    
+    <!-- Main container opening division -->
+    <div class="main-container">
+        <!-- Header section  -->
+        <header class="main-header">
+            <div class="logo">
+                <h1 style="color: white; text-align: center;">✨𝗣𝗶𝘆𝘂𝘀𝗵'𝘀 𝗣𝗼𝗿𝘁𝗳𝗼𝗹𝗶𝗼</h1>
+            </div>
+            <nav class="nev-links">
+                <ul>
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="./homepage/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header section ended -->
+         <!-- DropDown Code start -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span id="menu-icon">&#9776;</span>
+          </div>
+        <!-- ==================== -->
+        <!-- Home section -->
+
+        <!-- Hire me Button -->
+        <div class="home-container" id="home-section">
+            <div class="home-text-box">
+                <div class="text">
+                    <h1 class="home-text-style">Hi, I'm <span style="color: #00abf0;">Piyush Moroliya</span></h1>
+                    <h1 class="home-text-style-two">A passionate Full Stack Developer who's specializing <br> in both
+                        Frontend and Backend Development.</h1>
+                    <a href="./homepage/contact.html"><button>Get in Touch</button></a>
+                    <!-- Contact me Button -->
+                </div>
+            </div>
+        </div>
+        <!-- Home sectipn ended -->
+        <!-- ==================== -->
+        <!-- About section -->
+        <section class="About-section" id="about">
+            <div class="about-image">
+                <div class="about-image-box">
+                    <img class="image-style"
+                        src="./assets/images/portfolioimage-removebg-preview.png"
+                        alt="Piyush Moroliya">
+                </div>
+            </div>
+            <div class="about-text">
+                <h1 class="about-title">✨About Myself</h1>
+                <hr class="about-hr-style">
+                <h1 style="font-size: 22px; line-height: 1.5;">Hello, I am Piyush Moroliya and I am a Full Stack <br>
+                    Developer by Profession who has skills in
+                    HTML, CSS, Bootstrap,<br>Java, Python, Javascript and<br> C language and SQL.</h1>
+
+                <h1 style="font-size: 22px; line-height: 1.5;">And also I have some Experience in Hardware Description
+                    <br> Languages Like Xylix Vivado, Arduino
+                    Uno Board kit,<br> Raspberry PI(Python Interpreter) and Digital Electronics.
+                </h1>
+                <br>
+                <a href="./homepage/resume.html"><button>⭐ Resume</button></a>
+            </div>
+        </section>
+        <!-- About Section Ended -->
+        <!-- ======================== -->
+        <!-- Skills section -->
+        <section class="skills-section" id="skills">
+            <span class="skills-tittle">👨🏻‍💻 My Skills</span>
+            <hr class="hr-style-skills">
+
+            <div class="skills-row-one">
+                <!-- html box -->
+                <div class="row-one-first-box">
+                    <h1 class="skills-box-tittle">HTML5</h1>
+                    <hr class="hr-style-skills">
+                    <br>
+                    <h3 class="skills-text-style">HTML5 is the modern standard for structuring web content.</h3>
+                </div>
+                <!-- css box -->
+                <div class="row-one-second-box">
+                    <h1 class="skills-box-tittle">CSS3</h1>
+                    <hr class="hr-style-skills">
+                    <br>
+                    <h3 class="skills-text-style">CSS3 styles and animates web content with advanced design features.</h3>
+                </div>
+                <!-- bootstrap box -->
+                <div class="row-one-third-box">
+                    <h1 class="skills-box-tittle">Bootstrap</h1>
+                    <hr class="hr-style-skills">
+                    <br>
+                    <h3 class="skills-text-style">Bootstrap is a CSS framework for building responsive and modern websites
+                        quickly.</h3>
+                </div>
+                <!-- javascript box -->
+                <div class="row-one-fourth-box">
+                    <h1 class="skills-box-tittle">Javascript</h1>
+                    <hr class="hr-style-skills">
+                    <br>
+                    <h3 class="skills-text-style">JavaScript is a scripting language used to create dynamic and
+                        interactive web content.</h3>
+
+                </div>
+                <!-- skills box row two-->
+                <div class="skills-row-two">
+                    <!-- python box -->
+                    <div class="row-two-first-box">
+                        <h1 class="skills-box-tittle">Python</h1>
+                        <hr class="hr-style-skills">
+                        <br>
+                        <h3 class="skills-text-style">Python is a versatile, easy-to-read programming language used for
+                            web development, data analysis, AI, and more.</h3>
+                    </div>
+                    <div class="row-two-second-box">
+                        <!-- c box -->
+                        <h1 class="skills-box-tittle">C</h1>
+                        <hr class="hr-style-skills">
+                        <br>
+                        <h3 class="skills-text-style">C is a powerful, low-level programming language used for system
+                            programming and building efficient software.</h3>
+                    </div>
+                    <div class="row-two-third-box">
+                        <!-- Java box -->
+                        <h1 class="skills-box-tittle">Java</h1>
+                        <hr class="hr-style-skills">
+                        <br>
+                        <h3 class="skills-text-style">Java is a versatile, object-oriented programming language used for
+                            building cross-platform applications.</h3>
+                    </div>
+                </div>
+
+        </section>
+        <!-- Skills Section End  -->
+        <!-- =====================-->
+        <!-- Project section start -->
+        <h1 class="project-section-tittle" id="projects">🖥️ My Projects</h1>
+        <hr class="hr-style-skills">
+        <!-- main project container -->
+        <section class="project-container">
+            <!-- project components -->
+            <div class="project-items-container">
+                <!-- HTML Projects box -->
+                 <a href="./homepage/html-projects.html"><div class="project-box-one">
+                    <h1 class="project-items-tittle">HTML Projects</h1>
+                    <hr>
+                    <img style="margin-left: 15%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6935wo8bLZh5FeafJEffqWKDOpNpx6UE5bg&s" alt="html"
+                    width="70%" height="70%">
+                 </div></a>
+                <!-- CSS Projects box -->
+                 <a href="./homepage/css-projects.html"><div class="project-box-two">
+                    <h1 class="project-items-tittle">CSS Projects</h1>
+                    <hr>
+                    <img style="margin-left: 0%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAc4BswrDj_q0JcxkRYJ09NDHtv5GEfzOzQ&s"
+                    alt="css" width="100%" height="70%" >
+                 </div></a>
+                <!-- Bootstrap Projects box -->
+                 <a href="./homepage/bootstrap-projects.html"><div class="project-box-three">
+                    <h1 class="project-items-tittle">Bootstrap Projects</h1>
+                    <hr>
+                    <img style="margin-left: 0%;" src="https://images.seeklogo.com/logo-png/25/2/bootstrap-logo-png_seeklogo-258859.png"
+                    alt="bootstrap" width="100%" height="70%" >
+                 </div></a>
+                 <!-- JavaScript Projects box -->
+                 <a href="./homepage/javaScript-projects.html"><div class="project-box-four">
+                    <h1 class="project-items-tittle">JavaScript Projects</h1>
+                    <hr>
+                    <img style="margin-left: 0%;" src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png"
+                    alt="bootstrap" width="100%" height="70%" >
+                 </div></a>
+            </div>
+        </section>    
+        <!--Footer Start  -->
+        <footer class="footer">
+            <p>© 2025 Piyush Moroliya. All Rights Reserved.</p>
+        </footer>
+        <!--Footer end  -->
+
+
+    </div>
+    <!-- javascript code -->
+    <script>
+        function toggleMenu() {
+          document.querySelector('.nev-links').classList.toggle('active');
+        }
+      </script>
+      
 </body>
+
 </html>

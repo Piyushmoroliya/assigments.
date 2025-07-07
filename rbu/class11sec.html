@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 8 Notes</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(to bottom, #2a0845, #6441a5);
+      color: #e0d7f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(50, 50, 75, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+    
+    h1 {
+      color: #e4baff;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    
+    .subject-selector,
+    .social-science-dropdown {
+      margin: 20px 0;
+    }
+    
+    select {
+      padding: 12px 18px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background: #7c4dff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    select:hover {
+      background: #5e35b1;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    ul li {
+      background: rgba(90, 70, 130, 0.8);
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    ul li:hover {
+      background: #6a47b0;
+      transform: scale(1.02);
+    }
+    
+    ul li span {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .action-buttons {
+      display: none;
+      gap: 12px;
+    }
+    
+    .action-buttons button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .download-btn {
+      background: linear-gradient(to right, #7e57c2, #5c6bc0);
+      color: #fff;
+    }
+    
+    .download-btn:hover {
+      background: linear-gradient(to right, #5c6bc0, #3f51b5);
+    }
+    
+    .view-btn {
+      background: linear-gradient(to right, #ab47bc, #8e24aa);
+      color: #fff;
+    }
+    
+    .view-btn:hover {
+      background: linear-gradient(to right, #8e24aa, #7b1fa2);
+    }
+    
+    .download-all-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(to right, #7c4dff, #6200ea);
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+    
+    .download-all-btn:hover {
+      background: linear-gradient(to right, #5e35b1, #512da8);
+      transform: translateY(-3px);
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    /* Modal Image Viewer */
+#image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Darker background for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+  transition: opacity 0.3s ease-in-out; /* Fade-in effect */
+}
+
+#image-viewer.active {
+  display: flex;
+  opacity: 1; /* Ensures smooth transition when active */
+}
+
+.viewer-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  animation: scaleIn 0.4s ease-out; /* Smooth scaling effect */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#viewer-image {
+  width: 80%; /* Reduces overall size to 80% of the container */
+  max-width: 600px; /* Sets a maximum width for larger screens */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out; /* Smooth zoom on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+  #viewer-image {
+    width: 90%; /* Adjusts size for smaller screens */
+    max-width: none; /* Removes max-width restriction for very small screens */
+  }
+}
+
+
+#close-viewer {
+  position: absolute;
+  top: 10px; /* Adjusts placement relative to the image */
+  right: 10px;
+  background: #ff3d57;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1100; /* Ensures it appears above the image */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#close-viewer:hover {
+  background: #d32f2f;
+  transform: scale(1.2); /* Slight bounce effect */
+}
+
+#image-viewer button {
+  background: linear-gradient(135deg, #6441a5, #9b6bd9); /* Modern gradient */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#prev-image {
+  left: 10%;
+}
+
+#next-image {
+  right: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  #image-viewer button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  #prev-image {
+    left: 5%;
+  }
+
+  #next-image {
+    right: 5%;
+  }
+
+  #viewer-image {
+    width: 95%; /* Ensure responsiveness for smaller screens */
+  }
+}
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Class 11 - Notes</h1>
+    <!-- Subject Selector -->
+    <div class="subject-selector">
+      <label for="subject">Select Subject: </label>
+      <select id="subject">
+        <option value="mathematics">Mathematics</option>
+        <option value="science">Science</option>
+        <option value="social-science">Social Science</option>
+        <option value="english">English</option>
+      </select>
+    </div>
+
+    <!-- Social Science Dropdown -->
+    <div class="social-science-dropdown hidden">
+      <label for="social-science-topic">Select Topic: </label>
+      <select id="social-science-topic">
+        <option value="history">History</option>
+        <option value="civics">Civics</option>
+        <option value="geography">Geography</option>
+        <option value="economics">Economics</option>
+      </select>
+    </div>
+
+    <!-- Chapters List -->
+    <ul id="chapters-list">
+      <!-- Chapters will be dynamically added here -->
+    </ul>
+
+    <!-- Download All Button -->
+    <button class="download-all-btn" id="download-all-btn">Download All Chapters</button>
+  </div>
+
+  <!-- Modal Image Viewer -->
+  <div id="image-viewer" class="hidden">
+    <div class="viewer-content">
+      <span id="close-viewer">&times;</span>
+      <button id="prev-image">&larr;</button>
+      <img id="viewer-image" src="" alt="Chapter Image">
+      <button id="next-image">&rarr;</button>
+    </div>
+  </div>
+  
+
+  <script>
+    // Data for subjects, chapters, and their images
+const data = {
+  mathematics: [
+    "Chapter 1: Rational Numbers",
+    "Chapter 2: Linear Equations in One Variable",
+  ],
+  science: [
+    "Chapter 1: Crop Production and Management",
+    "Chapter 2: Microorganisms: Friend and Foe",
+  ],
+  "social-science": {
+    history: ["Chapter 1: How, When, and Where"],
+    civics: ["Chapter 1: The Indian Constitution"],
+  },
+  english: ["Chapter 1: The Best Christmas Present in the World"],
+};
+
+// Images for chapters (with multiple images per chapter)
+const chapterImages = {
+  "Chapter 1: Rational Numbers": [
+    "https://media.tenor.com/zlKoX5HPPu8AAAAM/cat-annoyed.gif",
+    "https://media.tenor.com/SsXEN-yHFqgAAAAM/exploding-car-explode.gif",
+    "https://media0.giphy.com/media/wr7oA0rSjnWuiLJOY5/200w.gif?cid=6c09b9524ddc8jinmepiitfb9jvlshyv6vhp247rdjswpojx&ep=v1_gifs_search&rid=200w.gif&ct=g",
+  ],
+  "Chapter 1: Crop Production and Management": [
+    "https://via.placeholder.com/800x400?text=Crop+Production+1",
+    "https://via.placeholder.com/800x400?text=Crop+Production+2",
+  ],
+  "Chapter 1: How, When, and Where": [
+    "https://via.placeholder.com/800x400?text=How+When+Where+1",
+    "https://via.placeholder.com/800x400?text=How+When+Where+2",
+  ],
+};
+
+// Elements
+const subjectSelect = document.getElementById("subject");
+const socialScienceDropdown = document.querySelector(".social-science-dropdown");
+const socialScienceTopic = document.getElementById("social-science-topic");
+const chaptersList = document.getElementById("chapters-list");
+const imageViewer = document.getElementById("image-viewer");
+const viewerImage = document.getElementById("viewer-image");
+const closeViewer = document.getElementById("close-viewer");
+const nextImageBtn = document.getElementById("next-image");
+const prevImageBtn = document.getElementById("prev-image");
+const downloadAllBtn = document.getElementById("download-all-btn");
+
+// Variables for the image gallery
+let currentImageIndex = 0;
+let currentChapterImages = [];
+
+// Populate chapters
+function populateChapters(subject, topic = null) {
+  chaptersList.innerHTML = "";
+  let chapters =
+    subject === "social-science" && topic
+      ? data[subject][topic] || []
+      : data[subject] || [];
+
+  chapters.forEach((chapter) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${chapter}</span>
+      <div class="action-buttons">
+        <button class="view-btn">View</button>
+        <button class="download-btn">Download</button>
+      </div>
+    `;
+
+    // Add click event for "View" button
+    li.querySelector(".view-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      openImageViewer(chapter);
+    });
+
+    // Add click event for "Download" button
+    li.querySelector(".download-btn").addEventListener("click", (e) => {
+      e.stopPropagation();
+      downloadChapter(chapter);
+    });
+
+    // Toggle buttons on list item click
+    li.addEventListener("click", () => {
+      const buttons = li.querySelector(".action-buttons");
+      buttons.style.display =
+        buttons.style.display === "flex" ? "none" : "flex";
+    });
+
+    chaptersList.appendChild(li);
+  });
+}
+
+// Open image viewer for a chapter
+function openImageViewer(chapter) {
+  currentChapterImages = chapterImages[chapter] || [];
+  if (currentChapterImages.length > 0) {
+    currentImageIndex = 0;
+    viewerImage.src = currentChapterImages[currentImageIndex];
+    imageViewer.style.display = "flex";
+  } else {
+    alert("No images available for this chapter.");
+  }
+}
+
+// Close image viewer
+closeViewer.addEventListener("click", () => {
+  imageViewer.style.display = "none";
+  viewerImage.src = "";
+});
+
+// Navigate to the next image
+nextImageBtn.addEventListener("click", () => {
+  if (currentChapterImages.length > 0) {
+    currentImageIndex =
+      (currentImageIndex + 1) % currentChapterImages.length;
+    viewerImage.src = currentChapterImages[currentImageIndex];
+  }
+});
+
+// Navigate to the previous image
+prevImageBtn.addEventListener("click", () => {
+  if (currentChapterImages.length > 0) {
+    currentImageIndex =
+      (currentImageIndex - 1 + currentChapterImages.length) %
+      currentChapterImages.length;
+    viewerImage.src = currentChapterImages[currentImageIndex];
+  }
+});
+
+// Download chapter (placeholder functionality)
+function downloadChapter(chapter) {
+  alert(`Downloading: ${chapter}`);
+}
+
+// Handle subject change
+subjectSelect.addEventListener("change", () => {
+  const selectedSubject = subjectSelect.value;
+  if (selectedSubject === "social-science") {
+    socialScienceDropdown.classList.remove("hidden");
+    populateChapters("social-science", socialScienceTopic.value);
+  } else {
+    socialScienceDropdown.classList.add("hidden");
+    populateChapters(selectedSubject);
+  }
+});
+
+// Handle topic change within social science
+socialScienceTopic.addEventListener("change", () => {
+  const selectedTopic = socialScienceTopic.value;
+  populateChapters("social-science", selectedTopic);
+});
+
+// Download all chapters (placeholder functionality)
+downloadAllBtn.addEventListener("click", () => {
+  alert("Downloading all chapters...");
+});
+
+// Initialize with default subject
+populateChapters(subjectSelect.value);
+
+
+  </script>
+</body>
+
+</html>

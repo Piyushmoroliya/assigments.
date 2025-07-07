@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>stanford university</title>
+    <link rel="stylesheet" href="sfu-website.css">
+</head>
+<!-- font CSS --> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+<!--font second css  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Palanquin+Dark:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+<body>
+    <!-- Add JavaScript before the closing </body> tag -->
+<script>
+    // Smooth Scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Add active class to the current section in navigation on scroll
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+    
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.href.includes(currentSection)) {
+                link.classList.add('active');
+            }
+        });
+    });
+    
+    // Button hover effect using JavaScript (optional improvement)
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = "orange"; // change color on hover
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = "lightcoral"; // revert back to original
+        });
+    });
+    </script>
+    
+    <!-- header -->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4"><span
+                    style="font-size: 35px; font-family: Georgia, 'Times New Roman', Times, serif;">Stanford
+                    University</span></span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#About" class="nav-link">About</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item"><a href="#Admissions" class="nav-link">Admissions</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item"><a href="#Courses" class="nav-link">Courses</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item"><a href="#Facility" class="nav-link">Facility</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </ul>
+    </header>
+    <div class="main-box">
+        <div class="inner-box">
+            <img src="https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-scaled.jpg" width="100%"
+                height="100%">
+        </div>
+        <br>
+        <br>
+        <!-- About section -->
+        <div class="about-box" id="About">
+            <h1>About Stanford University</h1>
+            <br>
+            <p>Stanford was founded almost 150 years ago on a bedrock of societal purpose. Our mission is to contribute
+                to the world by educating students for lives of leadership and contribution with integrity; advancing
+                fundamental knowledge and cultivating creativity; leading in pioneering research for effective clinical
+                therapies; and accelerating solutions and amplifying their impact.</p>
+        </div>
+        <br>
+        <br>
+        <div class="about-box-image">
+            <img src="https://www.stanford.edu/wp-content/uploads/2023/03/purposeful-hero.png" width="100%"
+                height="100%">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Admissions section -->
+        <div class="main-admissions-box" id="Admissions"><br>
+            <h1>Admissions </h1><br>
+            <p><span style="color: black;">Excellence in research, teaching, and medical care</span></p>
+            <p>Welcome to Stanford University, where innovation meets tradition, and excellence is a way of life.
+                Established with a vision to nurture talent, foster creativity, and promote holistic development, RBU
+                stands as a beacon of quality education in India. With a rich history dating back to its inception, the
+                university has continually evolved to meet the ever-changing needs of the educational landscape while
+                upholding its core values of integrity, excellence, and inclusivity.</p>
+        </div>
+        <br>
+        <div class="Admissions-first-box">
+            <div class="image-box-one">
+                <img src="https://www.stanford.edu/wp-content/uploads/2023/11/20220415_Maya_Guzdar_N6A7345-6-scaled.jpg"
+                    width="100%" height="100%">
+
+            </div>
+            <div class="image-box-second"><br>
+                <h1 class="Admissions-heading">Who we are</h1><br>
+                <p class="Admissions-paragraph">What drives our faculty, students, and staff is a spirit of possibility,
+                    a legacy <br> inherited from our
+                    pioneering founders who created Stanford in the memory of <br> their only child to benefit other
+                    people’s
+                    children. At Stanford, we learn from our <br> past but focus on the future, continually looking for
+                    new
+                    ways to make the world a <br> better place.</p>
+                <p class="Admissions-paragraph">We believe strongly in the role that higher education plays in
+                    supporting a thriving <br> society.
+                    Colleges and universities not only prepare students for their chosen path, <br> but they help create
+                    the
+                    next generation of citizen leaders and problem solvers. <br> Higher education institutions pursue a
+                    distinct and enduring mission in our <br>society, dedicated solely to the creation and dissemination
+                    of
+                    knowledge. The <br> breadth and richness of the fabric that comprises the world’s institutions of
+                    higher <br>
+                    learning are integral to long-term human advancement and well-being.</p>
+            </div>
+        </div>
+        <!-- end -->
+        <br>
+        <br>
+        <div class="Admissions-first-box">
+            <div class="image-box-one">
+                <img src="https://www.stanford.edu/wp-content/uploads/2023/05/20230418_Grayson_Armour_95A0681-2.jpg"
+                    width="100%" height="100%">
+
+            </div>
+            <div class="image-box-second" id="Courses">
+                <h1><span style="font-size: 35px;">Educating tomorrow’s global citizens</span></h1><br>
+                <p class="Admissions-paragraph">What drives our faculty, students, and staff is a spirit of possibility,
+                    a legacy <br> inherited from our
+                    pioneering founders who created Stanford in the memory of <br> their only child to benefit other
+                    people’s
+                    children. At Stanford, we learn from our <br> past but focus on the future, continually looking for
+                    new
+                    ways to make the world a <br> better place.</p>
+                <p class="Admissions-paragraph">We believe strongly in the role that higher education plays in
+                    supporting a thriving <br> society.
+                    Colleges and universities not only prepare students for their chosen path, <br> but they help create
+                    the
+                    next generation of citizen leaders and problem solvers. <br> Higher education institutions pursue a
+                    distinct and enduring mission in our <br>society, dedicated solely to the creation and dissemination
+                    of
+                    knowledge. The <br> breadth and richness of the fabric that comprises the world’s institutions of
+                    higher <br>
+                    learning are integral to long-term human advancement and well-being.</p>
+            </div>
+        </div>
+        <br>
+        <h1><span style="font-size: 25px; color: orange;">Click below for Admission Form :-</span></h1>
+        <a href="../stanford/sfu-form.html"><button>Enroll</button></a>
+        <!-- end -->
+        <br>
+        <br>
+        <br>
+        <h1>Academics</h1><br>
+        <p><span style="color: black;">Preparing students to make meaningful contributions to society as engaged
+                citizens and leaders in a complex world</span></p><br><br>
+        <div class="Courses-box">
+            <div class="caurses-box-one">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxWZvsLctUsBuX44n3wyr7MXgNOsjQgYUnMQ&s"
+                    width="100%" height="80%">
+                <h1 class="caurses-heading">Engineering</h1>
+
+            </div>
+            <div class="caurses-box-two">
+                <img src="https://compliancy-group.com/wp-content/uploads/2024/06/medical-audit.png" width="100%"
+                    height="80%">
+                <h1 class="caurses-heading">Medical</h1>
+
+            </div>
+            <div class="caurses-box-three">
+                <img src="https://images.business.com/app/uploads/2011/06/12131215/Leadership-Skills.png" width="100%"
+                    height="80%">
+                <h1 class="caurses-heading">Business</h1>
+
+            </div>
+            <div class="caurses-box-four">
+                <img src="https://www.shutterstock.com/image-vector/agriculture-logo-template-design-icon-260nw-472491418.jpg"
+                    width="100%" height="80%">
+                <h1 class="caurses-heading">Agriculture</h1>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- facility section -->
+        <h1>Facility</h1><br>
+        <h1 class="caurses-heading">Seven schools in which to pursue your passions</h1><br><br>
+        <div class="fabric-box" id="Facility">
+            <hr>
+            <p><span style="color: rgb(59, 59, 237);"><a href="https://en.wikipedia.org/wiki/Medicine">Medicine</a> |
+                    <a href="https://en.wikipedia.org/wiki/Humanities">Law Humanities & Sciences</a>| <a
+                        href="https://en.wikipedia.org/wiki/Engineering">Engineering
+                        Education</a><a href="https://en.wikipedia.org/wiki/Sustainability"> Sustainability</a> | <a
+                        href="https://en.wikipedia.org/wiki/Business">Business</a></span></p>
+            <hr>
+        </div>
+        <br>
+        <br>
+        <h1>Research</h1><br>
+        <p class="caurses-heading"><span style="color: black;">Driving discoveries vital to our world, our health, and
+                our intellectual life</span></p><br><br>
+        <div class="fabric-box-one">
+            <div class="text-box-one">
+                <hr>
+                <h1 class="caurses-heading">15 Institutes</h1>
+                <p>cross disciplinary boundaries</p>
+                <hr>
+
+            </div>
+            <div class="text-box-two">
+                <hr>
+                <h1 class="caurses-heading">120 Libraries</h1>
+                <p>hold over 12 million items</p>
+                <hr>
+
+            </div>
+            <div class="text-box-three">
+                <hr>
+                <h1 class="caurses-heading">$1.98 Billion</h1>
+                <p>sponsored research budget</p>
+                <hr>
+            </div>
+        </div>
+        <!-- contact -->
+        <!-- contact section -->
+        <section class="contact" id="Contact">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <div class="contact-text-text">
+                        <h1>Contact <span style="color: white;">US</span></h1>
+                        <br>
+                        <h2 style="margin-left: 15%; color: white; margin-top: -1%"><span
+                                style="color: aqua;">Contact:-</span> <br>755XXXXXXX</h2>
+                        <h2><span style="color: aqua;">Email:-</span>
+                            <span style="margin-left: -15%;">stanuniversity4@gmail.com</span>
+                        </h2>
+                        <!-- <span style="margin-right: -15%;"><a href="contact.html"> <button>Contact Me
+                                <i class="fa-solid fa-phone"></i>
+                            </button></a></span> -->
+                    </div>
+                    <div class="contact-map">
+                        <img src="https://estatic.universityguru.com/images/gmaps/a8b68b3b7cb7dca7231279dec8592c43.png"
+                            width="100%" height="100%" alt="">
+                    </div>
+                    <!-- footer  -->
+                     
+                    
+
+
+
+
+
+
+
+
+                </div>
+                <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <h4>Stanford University</h4>
+            <p>&copy; 2024 Stanford University. All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <ul class="footer-links">
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Admissions">Admissions</a></li>
+                <li><a href="#Courses">Courses</a></li>
+                <li><a href="#Facility">Facilities</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>
