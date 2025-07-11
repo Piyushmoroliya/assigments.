@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body,html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+.main-container{
+    width: 100vw;
+    height: 100vh;
+}
+/* Hedar section start */
+.header {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    background-attachment: fixed;
+    z-index: 1000;
+}
+
+.nev-one-container {
+    width: 100vw;
+    height: 5vh;
+    background-color: #393E46;
+    display: flex;
+    flex-direction: row;
+}
+
+.nev-one-items-1,
+.nev-one-items-2 {
+    width: 50vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-one-text {
+    width: 100%;
+    height: 5vh;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.item-two-text {
+    width: 100%;
+    height: 5vh;
+    margin-left: 38%;
+    margin-top: 2%;
+}
+
+.item-one-textstyle {
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+}
+
+.address-icon {
+    font-size: 2vh;
+    color: white;
+}
+
+.nev-two-container {
+    width: 100vw;
+    background-color: #98a1bc8e;
+    opacity: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+}
+
+.image-style {
+    width: 60px;
+    height: 60px;
+    border-radius: 300px;
+    object-fit: cover;
+}
+
+.text-box-nev-2 {
+    margin-left: 10px;
+}
+
+.logo-text-style {
+    color: black;
+    margin: 0;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    border-radius: 4px;
+}
+
+/* hover for nevbar */
+.nav-link {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Optional: slight color change on hover */
+.nav-link:hover {
+    color: #f39c12;
+    /* or any color matching your theme */
+}
+
+/* responsive nevbar */
+@media (max-width: 768px) {
+    .nev-one-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .nev-one-items-1,
+    .nev-one-items-2 {
+        width: 100vw;
+    }
+
+    .item-two-text {
+        margin-left: 5%;
+        width: 100%;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .nev-two-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .navbar .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: auto !important;
+        /* ⬅️ This makes dropdown align right */
+        width: auto;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: right;
+        padding: 10px 0;
+    }
+}
+
+/* Hedar section end */
+/* ==================== */
+/* About Home Section */
+.about-home-section {
+    width: 100vw;
+    height: 100vh;
+    height: calc(100vh - 10vh); /* Adjust if your header is taller */
+    padding-top: 10vh; /* Push content below fixed header */
+    background-image: url("https://static.vecteezy.com/system/resources/previews/029/561/283/non_2x/a-hairdresser-with-a-beard-in-a-black-coat-cuts-a-client-s-hair-free-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* Changed from fixed */
+  }
+.about-items{
+    width: 60vw;
+    height: 55vh;
+    border: 2px solid gold;
+    background-color: rgba(118, 68, 24, 0.421);
+    border-radius: 20px;
+}
+.about-tittle{
+    text-align: center;
+    font-size: 55px;
+    color: gold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 5%;
+}
+.about-caption{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about-paragraph{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+/* Button for back to home */
+.back-button {
+    width: 150px;
+    height: 40px;
+    margin-left: 40%;
+    background: linear-gradient(135deg, gold, #e67e22);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Responsive Design */
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .about-home-section {
+        height: auto;
+        padding: 15vh 0 5vh;
+    }
+
+    .about-items {
+        width: 85vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .about-tittle {
+        font-size: 38px;
+    }
+
+    .about-caption {
+        font-size: 26px;
+    }
+
+    .about-paragraph {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-home-section {
+        padding: 18vh 0 5vh;
+        height: auto;
+    }
+
+    .about-items {
+        width: 90vw;
+        padding: 15px;
+    }
+
+    .about-tittle {
+        font-size: 30px;
+    }
+
+    .about-caption {
+        font-size: 22px;
+    }
+
+    .about-paragraph {
+        font-size: 16px;
+    }
+}
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* About section with fade-in animation */
+  .about-home-section {
+    animation: fadeInScale 1s ease-in-out;
+  }
+  
+  /* Animate container */
+  .about-items {
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  
+  /* Heading animation */
+  .about-tittle {
+    animation: fadeInUp 1.4s ease forwards;
+  }
+  
+  /* Caption animation */
+  .about-caption {
+    animation: fadeInUp 1.6s ease forwards;
+  }
+  
+  /* Paragraph animation */
+  .about-paragraph {
+    animation: fadeInUp 1.8s ease forwards;
+  }
+  
+  /* Button animation */
+  .back-button {
+    animation: fadeInUp 2s ease forwards;
+  }
+/* About section end */
+/* ================= */
+/* Our Journey start */
+.main-about{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    margin-top: 5%;
+  }
+  .our-journey-tittle{
+    text-align: center;
+    font-size: 35px;
+
+  }
+  .hr-design{
+    width: 100px;
+    height: 3px;
+    background-color:#FF0072;
+    border-radius: 20px;
+    margin-left: 40%;
+  }
+  .our-journey-paragraph{
+    text-align: center;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+/* Our Journey end */
+/* ============== */
+/* Features start */
+/* about-features css*/
+.about-features{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+  }
+  .features-tittle{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+  }
+/* Features end */
+/* Responsive Code start */
+/* Responsive: About Section */
+@media (max-width: 768px) {
+    .about-home-section {
+      padding-top: 12vh;
+      height: auto;
+    }
+  
+    .about-items {
+      width: 90vw;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .about-tittle {
+      font-size: 32px;
+    }
+  
+    .about-caption {
+      font-size: 22px;
+    }
+  
+    .about-paragraph {
+      font-size: 16px;
+    }
+  
+    .back-button {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 130px;
+      height: 38px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Responsive: Our Journey Section */
+  @media (max-width: 992px) {
+    .main-about {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .our-journey-tittle {
+      font-size: 28px;
+    }
+  
+    .our-journey-paragraph {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+    .hr-design {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .rounded-lg-3 {
+      width: 100% !important;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .row.align-items-center {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  /* Responsive: Features Section */
+  @media (max-width: 992px) {
+    .about-features {
+      height: auto;
+      padding: 20px 0;
+    }
+  
+    .features-tittle {
+      font-size: 30px;
+    }
+  
+    .project-container {
+      padding: 10px;
+    }
+  
+    .card h3 {
+      font-size: 20px;
+    }
+  
+    .card p {
+      font-size: 14px;
+    }
+  
+    .col {
+      margin-left: 0 !important;
+    }
+  }
+  
+/* Responsive Code end */
+/* Footer section start */
+ /* Main content area to push footer down */
+ .main-content {
+  flex: 1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10%;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-nav {
+  margin-bottom: 30px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64b5f6, #42a5f5);
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #64b5f6;
+  transform: translateY(-2px);
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.footer-brand {
+  margin: 40px 0 30px;
+}
+
+.footer-brand h1 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #ffffff, #64b5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-info {
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  font-size: 16px;
+  color: #b0bec5;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.footer-info a {
+  color: #64b5f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+  color: #42a5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-nav ul {
+      gap: 20px;
+      flex-direction: column;
+  }
+
+  .footer-nav a {
+      font-size: 16px;
+  }
+
+  .footer-brand h1 {
+      font-size: 36px;
+  }
+
+  .footer-info p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      padding: 30px 0;
+  }
+
+  .footer-brand h1 {
+      font-size: 28px;
+  }
+
+  .footer-nav ul {
+      gap: 15px;
+  }
+}
+/* Footer Section end */
+

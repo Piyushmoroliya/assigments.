@@ -2,201 +2,599 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piyush's Portfolio</title>
-    <!-- bootstrap links of css -->
-     
-    <link rel="stylesheet" href="indexpage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9134/9134408.png">
-</head>
-<body>
-    <!-- Main container opening division -->
-    <div class="main-container">
-        <!-- Header section  -->
-        <header class="main-header">
-            <div class="logo">
-                <h1 style="color: white; text-align: center;">✨𝗣𝗶𝘆𝘂𝘀𝗵'𝘀 𝗣𝗼𝗿𝘁𝗳𝗼𝗹𝗶𝗼</h1>
-            </div>
-            <nav class="nev-links">
-                <ul>
-                    <li><a href="#home-section">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="./homepage/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Header section ended -->
-         <!-- DropDown Code start -->
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span id="menu-icon">&#9776;</span>
-          </div>
-        <!-- ==================== -->
-        <!-- Home section -->
+    <title>The Magic Salon</title>
 
-        <!-- Hire me Button -->
-        <div class="home-container" id="home-section">
-            <div class="home-text-box">
-                <div class="text">
-                    <h1 class="home-text-style">Hi, I'm <span style="color: #00abf0;">Piyush Moroliya</span></h1>
-                    <h1 class="home-text-style-two">A passionate Full Stack Developer who's specializing <br> in both
-                        Frontend and Backend Development.</h1>
-                    <a href="./homepage/contact.html"><button>Get in Touch</button></a>
-                    <!-- Contact me Button -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="index.css">
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Main-container start-->
+    <div class="main-container">
+        <!-- Header Section start -->
+        <header class="header">
+            <!-- Top Info Bar -->
+            <div class="top-info-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Open: Monday to Sunday | 9am-8pm</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-item justify-content-md-end">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <a href="https://www.google.com/maps/@21.2835793,78.5817698,416m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D">
+                                <span>Address: Near Kadu Petrol Pump Panchwati, Katol</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Main Navigation -->
+            <div class="main-nav">
+                <div class="nav-container">
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <img class="logo-img" 
+                             src="https://www.shutterstock.com/image-vector/mens-barbershop-logo-vector-silhouette-260nw-2221427545.jpg" 
+                             alt="The Magic Salon Logo">
+                        <h1 class="logo-text">The Magic Salon</h1>
+                    </div>
+    
+                    <!-- Desktop Menu -->
+                    <ul class="desktop-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Categories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+    
+                    <!-- Mobile Toggle Button -->
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+    
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu" id="mobileMenu">
+                        <a href="#home">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#about">About</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Section end -->
+        <!-- =================== -->
+        <!-- Home section start -->
+        <div class="main-home-section-container" id="home">
+            <div class="hero-carousel">
+                <!-- Carousel Slides -->
+                <div class="carousel-slide active">
+                    <img src="https://media.istockphoto.com/id/623477902/photo/man-gets-a-haircut-at-his-barber.jpg?s=612x612&w=0&k=20&c=Gxrsli5A3O5g2ptwsWwca3I39UP-KtexqoGXGYsgyhY="
+                     alt="Professional Hair Styling">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./Images/magic-salon-interior .jpeg" 
+                    alt="Hair Cutting Service">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://the-players-lounge.com/2018/wp-content/uploads/2022/10/The-Players-Lounge-124a.jpg"
+                     alt="Hair Washing">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://i.ytimg.com/vi/r_NachAxzSA/maxresdefault.jpg" 
+                    alt="Facial Treatment">
+                </div>
+    
+                <!-- Hero Content Overlay -->
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome To The Magic Salon</h1>
+                    <p class="hero-subtitle">Premium Beauty & Wellness Services</p>
+                    <p class="hero-description">
+                        Experience luxury and professionalism at our full-service salon. From stunning haircuts to rejuvenating facials.
+                    </p>
+                    <a href="#contact" class="cta-button">
+                        <i class="fas fa-calendar-alt"></i> Book Your Appointment
+                    </a>
+                </div>
+    
+                <!-- Carousel Controls -->
+                <button class="carousel-arrows carousel-prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrows carousel-next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+    
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide(1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
         </div>
-        <!-- Home sectipn ended -->
-        <!-- ==================== -->
-        <!-- About section -->
-        <section class="About-section" id="about">
-            <div class="about-image">
-                <div class="about-image-box">
-                    <img class="image-style"
-                        src="./assets/images/portfolioimage-removebg-preview.png"
-                        alt="Piyush Moroliya">
-                </div>
-            </div>
-            <div class="about-text">
-                <h1 class="about-title">✨About Myself</h1>
-                <hr class="about-hr-style">
-                <h1 style="font-size: 22px; line-height: 1.5;">Hello, I am Piyush Moroliya and I am a Full Stack <br>
-                    Developer by Profession who has skills in
-                    HTML, CSS, Bootstrap,<br>Java, Python, Javascript and<br> C language and SQL.</h1>
+        <!-- New Description Section -->
+        <section class="description-section">
+            <div class="container">
+                <h2 class="section-title floating">Our Premium Services</h2>
 
-                <h1 style="font-size: 22px; line-height: 1.5;">And also I have some Experience in Hardware Description
-                    <br> Languages Like Xylix Vivado, Arduino
-                    Uno Board kit,<br> Raspberry PI(Python Interpreter) and Digital Electronics.
-                </h1>
-                <br>
-                <a href="./homepage/resume.html"><button>⭐ Resume</button></a>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h3 class="service-title">Professional Haircuts</h3>
+                            <p class="service-description">Expert stylists crafting the perfect cut tailored to your
+                                face shape and lifestyle. From classic to contemporary styles.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-spray-can"></i>
+                            </div>
+                            <h3 class="service-title">Hair Treatments</h3>
+                            <p class="service-description">Revitalize your hair with our premium treatments including
+                                deep conditioning, keratin, and restorative therapies.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h3 class="service-title">Luxury Facials</h3>
+                            <p class="service-description">Rejuvenate your skin with our signature facial treatments
+                                using premium products and advanced techniques.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="service-title">Color & Styling</h3>
+                            <p class="service-description">Transform your look with our expert color services and
+                                professional styling for any occasion or event.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <div class="stat-label">Services Offered</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <span class="stat-number">9+</span>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <div class="stat-label">Expert Stylists</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- About Section Ended -->
-        <!-- ======================== -->
-        <!-- Skills section -->
-        <section class="skills-section" id="skills">
-            <span class="skills-tittle">👨🏻‍💻 My Skills</span>
-            <hr class="hr-style-skills">
-
-            <div class="skills-row-one">
-                <!-- html box -->
-                <div class="row-one-first-box">
-                    <h1 class="skills-box-tittle">HTML5</h1>
-                    <hr class="hr-style-skills">
-                    <br>
-                    <h3 class="skills-text-style">HTML5 is the modern standard for structuring web content.</h3>
+        <!-- Home section end -->
+        <!-- =============== -->
+        <!-- Services section start -->
+        <section class="services-section" id="services">
+            <div class="service-box-item">
+                <div class="service-tittle-box">
+                    <h1 class="service-tittle">Your Place of Beauty</h1>
                 </div>
-                <!-- css box -->
-                <div class="row-one-second-box">
-                    <h1 class="skills-box-tittle">CSS3</h1>
-                    <hr class="hr-style-skills">
-                    <br>
-                    <h3 class="skills-text-style">CSS3 styles and animates web content with advanced design features.</h3>
-                </div>
-                <!-- bootstrap box -->
-                <div class="row-one-third-box">
-                    <h1 class="skills-box-tittle">Bootstrap</h1>
-                    <hr class="hr-style-skills">
-                    <br>
-                    <h3 class="skills-text-style">Bootstrap is a CSS framework for building responsive and modern websites
-                        quickly.</h3>
-                </div>
-                <!-- javascript box -->
-                <div class="row-one-fourth-box">
-                    <h1 class="skills-box-tittle">Javascript</h1>
-                    <hr class="hr-style-skills">
-                    <br>
-                    <h3 class="skills-text-style">JavaScript is a scripting language used to create dynamic and
-                        interactive web content.</h3>
-
-                </div>
-                <!-- skills box row two-->
-                <div class="skills-row-two">
-                    <!-- python box -->
-                    <div class="row-two-first-box">
-                        <h1 class="skills-box-tittle">Python</h1>
-                        <hr class="hr-style-skills">
-                        <br>
-                        <h3 class="skills-text-style">Python is a versatile, easy-to-read programming language used for
-                            web development, data analysis, AI, and more.</h3>
+                <!-- row one services -->
+                <div class="row-one">
+                    <div class="image-box-one">
+                        <img class="services-image"
+                            src="https://i.pinimg.com/736x/80/1f/94/801f94315ebf544ab3a569ba5dad1001.jpg"
+                            alt="Haircuts Service">
                     </div>
-                    <div class="row-two-second-box">
-                        <!-- c box -->
-                        <h1 class="skills-box-tittle">C</h1>
-                        <hr class="hr-style-skills">
-                        <br>
-                        <h3 class="skills-text-style">C is a powerful, low-level programming language used for system
-                            programming and building efficient software.</h3>
+                    <div class="image-box-two">
+                        <img class="services-image"
+                            src="https://img.freepik.com/premium-vector/hair-care-washing-treatment-outline-icon_8071-60465.jpg"
+                            alt="Hair Wash Service">
                     </div>
-                    <div class="row-two-third-box">
-                        <!-- Java box -->
-                        <h1 class="skills-box-tittle">Java</h1>
-                        <hr class="hr-style-skills">
-                        <br>
-                        <h3 class="skills-text-style">Java is a versatile, object-oriented programming language used for
-                            building cross-platform applications.</h3>
+                    <div class="image-box-three">
+                        <img class="services-image"
+                            src="https://static.vecteezy.com/system/resources/previews/005/482/812/non_2x/woman-facial-massage-with-roller-line-icon-jade-roller-for-girl-face-massage-linear-pictogram-beauty-relax-procedure-for-female-skin-face-outline-icon-isolated-illustration-vector.jpg"
+                            alt="Facial Service">
+                    </div>
+                    <div class="image-box-four">
+                        <img class="services-image"
+                            src="https://img.freepik.com/premium-vector/man-hair-salon-logo-vector-illustration-white-background_1023984-42161.jpg"
+                            alt="Hair Styling Service">
                     </div>
                 </div>
 
-        </section>
-        <!-- Skills Section End  -->
-        <!-- =====================-->
-        <!-- Project section start -->
-        <h1 class="project-section-tittle" id="projects">🖥️ My Projects</h1>
-        <hr class="hr-style-skills">
-        <!-- main project container -->
-        <section class="project-container">
-            <!-- project components -->
-            <div class="project-items-container">
-                <!-- HTML Projects box -->
-                 <a href="./homepage/html-projects.html"><div class="project-box-one">
-                    <h1 class="project-items-tittle">HTML Projects</h1>
-                    <hr>
-                    <img style="margin-left: 15%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6935wo8bLZh5FeafJEffqWKDOpNpx6UE5bg&s" alt="html"
-                    width="70%" height="70%">
-                 </div></a>
-                <!-- CSS Projects box -->
-                 <a href="./homepage/css-projects.html"><div class="project-box-two">
-                    <h1 class="project-items-tittle">CSS Projects</h1>
-                    <hr>
-                    <img style="margin-left: 0%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAc4BswrDj_q0JcxkRYJ09NDHtv5GEfzOzQ&s"
-                    alt="css" width="100%" height="70%" >
-                 </div></a>
-                <!-- Bootstrap Projects box -->
-                 <a href="./homepage/bootstrap-projects.html"><div class="project-box-three">
-                    <h1 class="project-items-tittle">Bootstrap Projects</h1>
-                    <hr>
-                    <img style="margin-left: 0%;" src="https://images.seeklogo.com/logo-png/25/2/bootstrap-logo-png_seeklogo-258859.png"
-                    alt="bootstrap" width="100%" height="70%" >
-                 </div></a>
-                 <!-- JavaScript Projects box -->
-                 <a href="./homepage/javaScript-projects.html"><div class="project-box-four">
-                    <h1 class="project-items-tittle">JavaScript Projects</h1>
-                    <hr>
-                    <img style="margin-left: 0%;" src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png"
-                    alt="bootstrap" width="100%" height="70%" >
-                 </div></a>
+                <!-- row two services -->
+                <div class="row-two">
+                    <h1 class="row-two-tittle">At Magic Salon we Provide Quality Service.</h1>
+                    <p class="services-pargraph">Enhance The Perfect Services with The Magic Salon.</p>
+                    <a href="./components/Menu-page.html"><button  class="services-button">View Menu</button></a>
+                </div>
             </div>
-        </section>    
-        <!--Footer Start  -->
-        <footer class="footer">
-            <p>© 2025 Piyush Moroliya. All Rights Reserved.</p>
-        </footer>
-        <!--Footer end  -->
+        </section>
+        <!-- services section end -->
+        <!-- About section start -->
+        <section class="about-section" id="about">
+            <div class="about-iternal-box">
+                <!-- about introduction box -->
+                <div class="about-text-box">
+                    <h1 class="about-text-tittle">About The Magic Salon</h1>
+                    <br>
+                    <p class="about-paragraph">The Magic Salon blends style, care, and creativity <br> to bring out the
+                        best in you. From trendy cuts
+                        to relaxing <br> treatments, we turn every visit into <br> a magical transformation.</p>
+                    <br>
+                    <a href="./components/about-salon.html"><button class="about-button">View More</button></a>
+                </div>
+            </div>
+        </section>
+        <!-- About section end -->
+        <!-- ================ -->
+        <!--Categories Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <h1 class="gallery-title">Categories</h1>
+                <p class="gallery-subtitle">Discover the artistry and craftsmanship that makes The Magic Salon special
+                </p>
+                <!--Categories Filter Tabs -->
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-filter="all">All Work</button>
+                    <button class="gallery-tab" data-filter="haircuts">Haircuts</button>
+                    <button class="gallery-tab" data-filter="styling">Hair Styling</button>
+                    <button class="gallery-tab" data-filter="treatments">Treatments</button>
+                    <button class="gallery-tab" data-filter="facials">Facials</button>
+                </div>
+                <!--Categories Grid -->
+                <div class="gallery-grid">
+                    <!-- HaircutsCategories Items -->
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://content.latest-hairstyles.com/wp-content/uploads/hairstyles-for-men-with-thick-hair-16x9-1.jpg"
+                            alt="Professional Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Classic Cut</h4>
+                            <p>Precision haircut with modern styling</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://www.relentlessgrooming.com/cdn/shop/articles/Mullet_Haircut_4e67abd3-3b61-4494-97c1-f7d261168098.jpg?v=1746585379"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Mullet Hairstyle</h4>
+                            <p>Contemporary cut with fade technique</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://www.relentlessgrooming.com/cdn/shop/articles/Crew_Cut_Hairstyles_For_Men_be6af9b2-8ff9-4ef2-9bc8-b471374a60a2.jpg?v=1742680316"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Crew Haircut</h4>
+                            <p>The crew cut never goes out of style</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://cdn.shopify.com/s/files/1/0460/6977/6547/files/undercut-buzzcut.jpg?v=1714420843"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Buzz Haircut</h4>
+                            <p>The buzz cut defines fearless style</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://www.beardbeasts.com/cdn/shop/articles/Curly_Hair_Fade_The_Ultimate_Guide_to_Stylish_Fades_for_Curly_Hair_2_6b835065-ef48-493c-bead-2978dd9154dc.jpg?v=1743786391&width=600"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Curly Fade Cut</h4>
+                            <p>The curly fade cut brings curls to life with sharp edges</p>
+                        </div>
+                    </div>                 
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://regalgentleman.com/cdn/shop/articles/Short_Textured_Quiff_5_1024x.jpg?v=1542731080"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Textured quiff Cut</h4>
+                            <p>The textured quiff cut makes every strand stand out</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf9G0ogHN_-3DxDGDceFVUNucOt_Nn6dWPnQ&s"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Midfade Cut</h4>
+                            <p>The mid fade cut delivers style with a smooth transition</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://www.menshairstylestoday.com/wp-content/uploads/2023/03/Curly-Hair-Fade-Haircut.jpg"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Fade haircuts with curls Cut</h4>
+                            <p>The perfect blend of texture and precision</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Jw1bhYgcYYyvrsMQ4n9Ja2b2lfN0wOOV0g&s"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Faux hawk hairstyle Cut</h4>
+                            <p>The faux hawk turns heads without going over the top</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://www.gatsbyglobal.com/en/technique/undercut-hairstyles-men-classics-hottest-trends/images/img7.jpg"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Undercut Hairstyle</h4>
+                            <p>The undercut is where classic meets modern edge</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="haircuts">
+                        <img src="https://www.beardbeasts.com/cdn/shop/articles/The_Short_Textured_Quiff_Featured_Style_Guide_1_f78da9f9-8556-4b4d-880f-54b6768a0bce.jpg?v=1741280179&width=600"
+                            alt="Trendy Haircut">
+                        <div class="gallery-overlay">
+                            <h4>Quiff Cut</h4>
+                            <p>The quiff cut is confidence styled to perfection</p>
+                        </div>
+                    </div>
+                    <!-- Hair StylingCategories Items -->
+                    <div class="gallery-item" data-category="styling">
+                        <img src="https://mensgrooming.ie/wp-content/uploads/2022/06/WEDDINGS.jpg"
+                            alt="Hair Styling">
+                        <div class="gallery-overlay">
+                            <h4>Wedding Style</h4>
+                            <p>Elegant bridal hair styling</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="styling">
+                        <img src="https://media.istockphoto.com/id/1154666732/photo/hairdresser-bleaching-hair-of-a-young-adult-man.jpg?s=612x612&w=0&k=20&c=yzW29xOTz4yIZEQpCKtD6R9nrkh3macvs0FB_DkhzuQ="
+                            alt="Hair Color">
+                        <div class="gallery-overlay">
+                            <h4>Color & Style</h4>
+                            <p>Professional hair coloring service</p>
+                        </div>
+                    </div>
+
+                    <!-- TreatmentsCategories Items -->
+                    <div class="gallery-item" data-category="treatments">
+                        <img src="https://alurabeautysalon.com/wp-content/uploads/2021/07/Hair-Spa-Men.jpg"
+                            alt="Hair Treatment">
+                        <div class="gallery-overlay">
+                            <h4>Hair Spa</h4>
+                            <p>Deep conditioning treatment</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="treatments">
+                        <img src="https://media.istockphoto.com/id/640281268/photo/professional-barber-undergoing-hairwash-at-salon.jpg?s=612x612&w=0&k=20&c=FkesDrgkmB8Wj7K2GWU0Swf23m-vI4Dz8SKMTLiILdU="
+                            alt="Hair Wash">
+                        <div class="gallery-overlay">
+                            <h4>Hair Wash</h4>
+                            <p>Relaxing hair wash and massage</p>
+                        </div>
+                    </div>
 
 
+                    <div class="gallery-item" data-category="treatments">
+                        <img src="https://i.ytimg.com/vi/wfs_udp3qBU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDcbOC-X_uxyzy-T9662aiVNx-MdQ"
+                            alt="Hair Wash">
+                        <div class="gallery-overlay">
+                            <h4>Hair Drying</h4>
+                            <p>Hair drying is where the perfect look begins</p>
+                        </div>
+                    </div>
+
+                    <!-- FacialsCategories Items -->
+                    <div class="gallery-item" data-category="facials">
+                        <img src="https://www.glitzwax.com/wp-content/uploads/2018/07/Gentleman%E2%80%99s-Facial-min.jpg"
+                            alt="Facial Treatment">
+                        <div class="gallery-overlay">
+                            <h4>Luxury Facial</h4>
+                            <p>Premium skincare treatment</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="facials">
+                        <img src="https://www.nyib.edu/wp-content/uploads/2022/08/Skin-Care-for-Men.jpg"
+                            alt="Skincare">
+                        <div class="gallery-overlay">
+                            <h4>Deep Cleansing</h4>
+                            <p>Professional facial cleansing</p>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item" data-category="facials">
+                        <img src="https://nrbellezza.com/Product_Images/19187-20211208024054.jpg"
+                            alt="Skincare">
+                        <div class="gallery-overlay">
+                            <h4>Clean up</h4>
+                            <p>A clean-up keeps your style on point, every time</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional mixed items -->
+                    <div class="gallery-item" data-category="styling">
+                        <img src="https://www.fashionbeans.com/wp-content/uploads/2014/12/party-season-hair-1.jpg"
+                            alt="Hair Styling">
+                        <div class="gallery-overlay">
+                            <h4>Party Look</h4>
+                            <p>Glamorous styling for special occasions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Categories Stats -->
+
+            </div>
+        </section>
+        <!-- Contact Section Start -->
+        <section class="contact-section" id="contact">
+            <div class="contact-items">
+                <!-- Contact box one -->
+                <div class="contact-container-one">
+                    <!-- Title box one -->
+                    <div class="tittle-one">
+                        <h1 class="tittle-style">Our Team</h1>
+                        <p class="subtitle">Meet our skilled professionals dedicated to your beauty</p>
+                    </div>
+                    <!-- main container for rows -->
+                    <div class="main-rows-container">
+                        <!-- row one start -->
+                        <div class="row-one-container">
+                            <div class="image-container-one">
+                                <img class="image-style-our-team" src="./Images/sumit-magic-sallon.jpeg"
+                                    alt="Sumit Nagpurkar">
+                            </div>
+                            <div class="text-container-one">
+                                <h4 class="text-styling">Sumit Nagpurkar</h4>
+                                <p class="our-team-paragraph">📞 +91 9923327632 <br>⭐10 Years of Experience</p>
+                                <p class="specialty">Specializes in Hair Styling & Color</p>
+                            </div>
+                        </div>
+                        <!-- row one end -->
+
+                        <!-- row two start -->
+                        <div class="row-two-container">
+                            <div class="image-container-two">
+                                <img class="image-style-our-team" src="./Images/akash-magic-salon-pro.jpeg"
+                                    alt="Akash Ambulkar">
+                            </div>
+                            <div class="text-container-two">
+                                <h4 class="text-styling">Akash Ambulkar</h4>
+                                <p class="our-team-paragraph">📞 +91 9604604382 <br>⭐5 Years of Experience</p>
+                                <p class="specialty">Expert in Skin Care & Facial Treatments</p>
+                            </div>
+                        </div>
+                        <!-- row two end -->
+
+                        <!-- row three start -->
+                        <div class="row-three-container">
+                            <div class="image-container-three">
+                                <img class="image-style-our-team" src="./Images/rushikesh-magic-salon.png"
+                                    alt="Rushikesh Jumale">
+                            </div>
+                            <div class="text-container-three">
+                                <h4 class="text-styling">Rushikesh Jumale</h4>
+                                <p class="our-team-paragraph">📞 +91 8698991346
+                                    <br>⭐3 Years of Experience
+                                </p>
+                                <p class="specialty">Professional in Massage & Wellness</p>
+                            </div>
+                        </div>
+                        <!-- row three end -->
+                    </div>
+                </div>
+
+                <!-- Contact box two -->
+                <div class="contact-container-two">
+                    <!-- Title box two -->
+                    <div class="tittle-two">
+                        <h1 class="tittle-style">Contact Us</h1>
+                        <p class="subtitle">Get in touch for appointments and inquiries</p>
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+
+
+                        <!-- Contact Information -->
+                        <div class="contact-info">
+                            <h3>Visit Our Salon</h3>
+                            <p>📍In front of Laxmi Kamal Near Kadu Petrol Pump Main Rode Panchwati, Katol</p>
+                            <p>🕒 Open: Mon-Sun 9:00 AM - 8:00 PM</p>
+                            <p>📞 Main: +91 9923327632</p>
+                            <p>📞 Other: +91 8208225985</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Contact Section end -->
+       <!-- ============== -->
+        <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-brand">
+                <h1>The Magic Salon</h1>
+            </div>
+            
+            <div class="footer-info">
+                <p>©2025 The Magic Salon. All right reserved.</p>
+                <p>Design and Developed by <a href="#developer">Piyush_M FullStack Developer @Enjoy Programming PVT LTD</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section end -->
     </div>
-    <!-- javascript code -->
-    <script>
-        function toggleMenu() {
-          document.querySelector('.nev-links').classList.toggle('active');
-        }
-      </script>
-      
+    <!-- Main-container end-->
+
+
+    <!-- JavaScript File -->
+
+   <script src="./index.js"></script>
+    
+  
 </body>
 
 </html>

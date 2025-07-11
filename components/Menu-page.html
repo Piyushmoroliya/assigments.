@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Magic Salon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #393E46;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            img {
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .image-container {
+                max-width: 100%;
+            }
+        }
+
+        /* For very small screens */
+        @media (max-width: 320px) {
+            body {
+                padding: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="../Images/Magic-salon-menu.png" alt="Magic Salon Menu">
+    </div>
+</body>
+</html>
